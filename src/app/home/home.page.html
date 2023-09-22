@@ -1,184 +1,142 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-
-  <ion-row>
-    <ion-col size="12" class="ion-text-center">
-      <ion-button (click)="pegarDados()">Recuperar dados</ion-button>
-      <ng-container *ngIf="this.isLoading">
-        <ion-spinner></ion-spinner>
-      </ng-container>
-      <ion-label>{{ this.nome_usuario }}</ion-label>
-      
-    </ion-col>
-  </ion-row>
-
-  <!-- FORMULÁRIO CRIAR CONTA -->
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <form #criarContaForm="ngForm" (ngSubmit)="criarConta(criarContaForm.value)">
-        <ion-item lines="none">
-          <ion-label>Criar Conta</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Usuário" name="email" ngModel type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Senha" name="password" ngModel type="password"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-button color="light" slot="start" routerLink="/home">Voltar</ion-button>
-          <ion-button color="light" slot="end" type="submit">Cadastrar</ion-button>
-        </ion-item>
-      </form>
-    </ion-col>
-  </ion-row>
-
-<!-- FORMULÁRIO DE LOGIN -->
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <form #loginForm="ngForm" (ngSubmit)="realizarLogin(loginForm.value)">
-        <ion-item lines="none">
-          <ion-label>Login</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Usuário" name="email" ngModel type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Senha" name="password" ngModel type="password"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-button color="light" slot="end" type="submit">
-            <ng-container *ngIf="this._authenticate.isLoading">
-              <ion-spinner></ion-spinner>
-            </ng-container>
-            <ng-container *ngIf="!this._authenticate.isLoading">
-              Login
-            </ng-container>
-          </ion-button>
-        </ion-item>
-      </form>
-    </ion-col>
-  </ion-row>
-
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Barra de navegação -->
   
-  <!-- FORMULÁRIO PARA INSERIR UM NOVO ALUNO -->
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <form #inserirAlunoForm="ngForm" (ngSubmit)="inserirAluno(inserirAlunoForm.value)">
-        <ion-item lines="none">
-          <ion-label>Inserir Novo Aluno</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Usuário" name="nome" ngModel type="text"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-button color="light" slot="end" type="submit">Inserir Aluno</ion-button>
-        </ion-item>
-      </form>
-    </ion-col>
-  </ion-row>
-
-
-  <!-- LISTAR TODOS ALUNOS -->
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <ion-item lines="none">
-        <ion-button color="light" slot="end" (click)="listarAlunos()">Listar Alunos</ion-button>
+  
+  <ion-menu contentId="main-content" >
+    <ion-header class="fundo_menu" >  
+      <ion-item >
+        <ion-title class="titulo1"><h1>Malvzuco</h1></ion-title>
       </ion-item>
-      <ng-container *ngFor="let aluno of this.alunos">
-        <h1>Nome: {{ aluno['nome'] }}</h1>
-        <h1>Idade: {{ aluno['idade'] }}</h1>
-      </ng-container>
+    </ion-header>
+
+    <ion-col class="menu_botao">
+      <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
+
+      <ion-button class="botao"  shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
+
+      <ion-button class="botao"  shape="round" expand="full" routerLink="/contato">Contato</ion-button>
+    
+      <ion-button class="botao"  shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
     </ion-col>
-  </ion-row>
+
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar class="fundo_menu">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title ><img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img"></ion-title>
+        
+      </ion-toolbar>
+      
+    </ion-header>
+
+    <!-- Corpo -->
+    
+    <ion-content class="ion-padding" class="cor_fundo">
+      
+      <ion-row class="centro" >
+        <ion-col class="conteudo" size-lg="3" size-md="12" size-sm="12">
+          <ion-card>
+            <img alt="Empresa" src="../../assets/icon/grafico.png" />
+            <ion-card-header>
+              <ion-card-title><h1>História</h1></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Empresa malvzuco foi criada no ano de 2008  quando ouve uma licitação para empresas
+              na cidade de iperó com intuito de contratar empresas para prestação serviços de
+              manutenção nas escolas da cidade. Com a prestação de serviços nas escolas surgiu a 
+              ideia de prestar serviços além da prefeitura serviços de hidráulica,  elétrica e 
+              instalação e manutenção de ar condicionados para as pessoas que precisacem dos tais serviços.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col class="conteudo" size-lg="3" size-md="6" size-sm="12">
+          <ion-card>
+            <img alt="Foto da Região" src="../../assets/icon/map.png" />
+            <ion-card-header>
+              <ion-card-title><h1>Região localizada</h1></ion-card-title>
+
+            </ion-card-header>
+          
+            <ion-card-content>
+              Iperó é a cidade onde a empresa está localizada atualmente,Iperó é uma cidade localizada 
+              no estado de São Paulo, no Brasil. Com uma população de cerca de 32 mil habitantes, Iperó é conhecida
+              por ser sede da Companhia Brasileira de Alumínio (CBA), uma das maiores produtoras de alumínio do país.
+              Além da indústria do alumínio, a economia de Iperó também é impulsionada pela produção agrícola, com destaque
+              para o cultivo de milho, soja e cana-de-açúcar.
+              Além de ter um dos principais lugares historicos do país a fazenda Ipanema, que contribuiu para diversos avanços no país.
+            
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col class="conteudo" size-lg="3" size-md="6" size-sm="12">
+          <ion-card>
+            <img alt="Empresa" src="../../assets/icon/equipe.png" />
+            <ion-card-header>
+              <ion-card-title><h1>Sobre nós</h1></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Nós da empresa Malvzuco prestamos Serviços como, Elétrica, Hidráulica 
+              e instalação de Ar condicionados todos os funcionário da empresa tem um curso para cada 
+              prestação de serviços disponibilizadas pela empresa.todos os nossos funcionários são orientados
+              a sempre fazer os serviços conforme o orçamento e buscando sempre satisfazer a vontade de nossos clientes. 
+              Já estampos há 15 anos dentro do mercado de prestação de serviços. Somos pioneiros no ramo de instalação e
+              manutenção de ar condicionado na cidade de iperó.
+          
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+ 
 
 
-  <!-- FORMULÁRIO PARA REMOVER ALUNO -->
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <ng-container *ngFor="let aluno of this.alunos">
-        <form (ngSubmit)="removerAluno(aluno)">
-          <ion-item>
-            <ion-label>Nome do Aluno: {{ aluno['nome'] }}</ion-label>
-          </ion-item>
-          <ion-item lines="none">
-            <ion-button color="light" slot="end" type="submit">Remover Aluno</ion-button>
-          </ion-item>
-        </form>
-      </ng-container>
-    </ion-col>
-  </ion-row>
+      <ion-footer>
+        <ion-row >
+          <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
+            <h4>E-MAIL:</h4> 
+            <h5>malvzuco@yahoo.com.br</h5> <br>
+   
+            <h4>TELEFONE:</h4> 
+            <h5>+15 99762-6275</h5>
+          </ion-col>
 
+          <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
+            <h4 >MAPA DO SITE</h4>
+            <div>
+              <ion-button class="botao"  shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
+              <ion-button class="botao"  shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
+              <ion-button class="botao"  shape="round" expand="full" routerLink="/contato">Contato</ion-button>
+              <ion-button class="botao"  shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
+            </div>
+          </ion-col>
 
-   <!-- FORMULÁRIO PARA CONSULTAR UM ALUNO -->
-   <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <form #consultarForm="ngForm" (ngSubmit)="consultarAluno(consultarForm.value)">
-        <ion-item lines="none">
-          <ion-label>Consultar Aluno</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Usuário" name="nome" ngModel type="text"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-button color="light" slot="end" type="submit">Consultar</ion-button>
-        </ion-item>
-      </form>
-    </ion-col>
-  </ion-row>
+          <ion-col class="imagem" size-lg="6" size-md="10" size-sm="12">
+            <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="imagem da logo">
+          </ion-col>
 
-
-     <!-- FORMULÁRIO ATUALIZAR UM ALUNO -->
-     <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-lg="6">
-        <form #atualizarForm="ngForm" (ngSubmit)="atualizarDadosAluno(atualizarForm.value)">
-          <ion-item lines="none">
-            <ion-label>Atualizar Aluno</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-input label="Usuário" name="nome" ngModel type="text"></ion-input>
-          </ion-item>
-          <ion-item lines="none">
-            <ng-container *ngIf="this.aluno.id == null">  
-              <ion-button color="light" slot="end" type="submit">Consultar</ion-button>
-            </ng-container>
-            <ng-container *ngIf="this.aluno.id != null">  
-              <ion-button color="light" slot="end" type="submit">Atualizar</ion-button>
-            </ng-container>
-          </ion-item>
-        </form>
-      </ion-col>
-    </ion-row>
-
-
-    <!-- TEMPLATE PARA ENVIAR ARQUIVO PARA O FIREBASE -->
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-lg="6">
-        <ion-item>
-          <input type="file" value="Upload" (change)="memorizarArquivo($event)">
-        </ion-item>
-        <ion-item>
-          <ion-button color="medium" slot="end" size="small" (click)="fazerUpload()">Enviar Tarefa</ion-button>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-lg="6">
-        <ion-item>
-          <img src="https://firebasestorage.googleapis.com/v0/b/projetoexemplo-e640c.appspot.com/o/minha_imagem.jpeg?alt=media&token=5b63e63b-081b-493b-981d-4ff73b18b14e" alt="">
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
+          
+        </ion-row>
+      </ion-footer>
+ 
+      
+    </ion-content>
+  </div>
 
   
+  <!-- Rodapé -->
 
+  
+  <!-- Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
 </ion-content>

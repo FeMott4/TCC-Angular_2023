@@ -1,9 +1,6 @@
 *{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
   }
-  
   // cor de fundo
   .cor_fundo{
     --ion-background-color:rgb(34,132,230);;
@@ -15,76 +12,74 @@
     --ion-toolbar-background:#0B2C4D;
     --ion-item-background:#040F1A;
   }
-  ion-button{ 
+  ion-button{
     --background:#0B2C4D;
   }
   .menu_botao{
     background: rgb(4,15,26);
     background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
   }
-  .titulo1{
-    margin-top: 1vh; 
+  .titulo1{ 
+    margin-top: 1vh;
     margin-bottom: 3vh;
     color: white;
     text-align: center;
   }
   
   // menu superior
-  .logo{
-    height: 5vh;
-  }  
   .botao{
-    width: 100%;
+    width: 100%; 
     margin-bottom: 2vh;
     color: white;
+  }
+  .logo{
+    height: 5vh;
+  }
+    
+  // CSS page
+  .titulo{ 
     margin-top: 1vh;
-  }
-  .titulo_nav{
-    color: white;
-  }
-  
-  // cards
-  .centro{
-    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    font-size: 6vh;
+    font-weight: 1000;
+    font-family: poupins;
+    border-bottom: 0.3vh solid #0B2C4D;
+  } 
+  .servico_informacao{
+    margin-bottom: 25vh;
     display: flex;
     justify-content: space-around;
   }
   
+  // Cards
   ion-card{
-    margin-bottom: 6vh;
-    max-height:110vh;
-    min-height:80vh;
+    margin-top: 3vh;
+    border: 0.5vh solid #0B2C4D;
+    border-radius: 1vh;
+    max-height:70vh;
+    min-height:60vh;
+    text-align: center;
+    
+  }
+  ion-card ion-card-title h1{
     text-align: center;
   }
-  // card imagens
+  
+  // imagem card
   ion-card img{
     max-height: 40vh;
-    min-height: 30vh;
-    min-width: 30%;
+    min-height: 40vh;
+    min-width: 60%;
     max-width: 80%;
     padding: 4vh;
+  
   }
   
-  // textos
-  ion-card h1{
-    margin-top: 1vh;
-    margin-bottom: 0.5vh;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    padding: 3vh;
-  }
-  
-  ion-card ion-card-content{
-    font-size: medium;
-    color: white;
-    padding: 3vh;
-  } 
   
   // footer
   ion-footer{
     padding: 5vh;
-    color: white;
     background: rgb(4,15,26);
     background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
   }
@@ -92,9 +87,11 @@
     text-align: center;
     font-family: arial;
   }
-  .imagem img{
-    width: 50vh;
-    min-width: 30vh;
+  .imagem img img{
+    width: 20vh;
+    min-width: 10vh;
+    text-align: center;
   }
+  
   
   

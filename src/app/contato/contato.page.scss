@@ -1,90 +1,66 @@
 *{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
   }
-  
   // cor de fundo
   .cor_fundo{
     --ion-background-color:rgb(34,132,230);;
     --ion-background-color:radial-gradient(circle, rgba(34,132,230,1) 0%, rgba(27,103,179,1) 22%, rgba(19,73,128,1) 60%, rgba(11,44,77,1) 100%);
   }
   
-  // Menu fundo parte de dentro
+  // Menu fundo de dentro
   .fundo_menu{
     --ion-toolbar-background:#0B2C4D;
     --ion-item-background:#040F1A;
   }
   ion-button{ 
-    --background:#0B2C4D;
+    --background:#0B2C4D; 
   }
   .menu_botao{
     background: rgb(4,15,26);
     background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
   }
-  .titulo1{
-    margin-top: 1vh; 
-    margin-bottom: 3vh;
-    color: white;
-    text-align: center;
-  }
   
   // menu superior
-  .logo{
-    height: 5vh;
-  }  
   .botao{
     width: 100%;
     margin-bottom: 2vh;
     color: white;
+  }
+  .titulo1{
     margin-top: 1vh;
-  }
-  .titulo_nav{
+    margin-bottom: 3vh;
     color: white;
+    text-align: center; 
   }
+  .logo{
+    height: 5vh;
+  }  
   
-  // cards
-  .centro{
-    margin-top: 5vh;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  ion-card{
-    margin-bottom: 6vh;
-    max-height:110vh;
-    min-height:80vh;
+  // Page
+  .conteudo{
     text-align: center;
+    margin-top:4vh;
   }
-  // card imagens
-  ion-card img{
-    max-height: 40vh;
+  
+  // mapa
+  .mapa{
+    max-width: 60vh;
+    min-width: 30vh;
+    max-height: 60vh;
     min-height: 30vh;
-    min-width: 30%;
-    max-width: 80%;
-    padding: 4vh;
+    margin-top: 2vh;
   }
   
-  // textos
-  ion-card h1{
-    margin-top: 1vh;
-    margin-bottom: 0.5vh;
-    text-align: center;
-    font-weight: bold;
+  // Contato whats
+  .link_whats a p{
     color: white;
-    padding: 3vh;
+    text-decoration: none;
   }
-  
-  ion-card ion-card-content{
-    font-size: medium;
-    color: white;
-    padding: 3vh;
-  } 
   
   // footer
   ion-footer{
+    margin-top:10vh;
     padding: 5vh;
-    color: white;
     background: rgb(4,15,26);
     background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
   }
@@ -97,4 +73,4 @@
     min-width: 30vh;
   }
   
-  
+    
