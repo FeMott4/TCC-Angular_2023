@@ -1,25 +1,30 @@
 <ion-content [fullscreen]="true">
   <!-- bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <!-- Barra de navegação -->
-  
-  
-  <ion-menu contentId="main-content" >
-    <ion-header class="fundo_menu" >  
-      <ion-item >
-        <ion-title class="titulo1"><h1>Malvzuco</h1></ion-title>
+
+
+  <ion-menu contentId="main-content">
+    <ion-header class="fundo_menu">
+      <ion-item>
+        <ion-title class="titulo1">
+          <h1>Malvzuco</h1>
+        </ion-title>
       </ion-item>
     </ion-header>
 
     <ion-col class="menu_botao">
       <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
 
-      <ion-button class="botao"  shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
+      <ion-button class="botao" shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
 
-      <ion-button class="botao"  shape="round" expand="full" routerLink="/contato">Contato</ion-button>
-    
-      <ion-button class="botao"  shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
+      <ion-button class="botao" shape="round" expand="full" routerLink="/contato">Contato</ion-button>
+
+      <ion-button class="botao" shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
     </ion-col>
 
   </ion-menu>
@@ -30,17 +35,84 @@
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title ><img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img"></ion-title>
-        
+        <ion-title><img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img"></ion-title>
+
       </ion-toolbar>
-      
+
     </ion-header>
 
     <!-- Corpo -->
-    
+
     <ion-content class="ion-padding" class="cor_fundo">
-      
-      <ion-row class="centro" >
+
+      <ion-row class="justify-content-center">
+
+        <ion-col size-lg="8" size-md="10" size-sm="8">
+          
+          <div class="conteudo">
+            <div>
+              <img src="../../assets/icon/grafico.png" alt="">
+            </div>
+
+
+            <div class="text">
+              <div id="linha_vertical"></div>
+
+              <p>Empresa malvzuco foi criada no ano de 2008 quando ouve uma licitação para empresas
+                na cidade de iperó com intuito de contratar empresas para prestação serviços de
+                manutenção nas escolas da cidade. Com a prestação de serviços nas escolas surgiu a
+                ideia de prestar serviços além da prefeitura serviços de hidráulica, elétrica e
+                instalação e manutenção de ar condicionados para as pessoas que precisacem dos tais serviços.</p>
+            </div>
+
+          </div> <hr>
+        </ion-col>
+
+        <ion-col size-lg="8" size-md="10" size-sm="8">
+          
+          <div class="conteudo">
+            <div>
+              <img src="../../assets/icon/grafico.png" alt="">
+            </div>
+
+
+            <div class="text">
+              <div id="linha_vertical"></div>
+
+              <p>Empresa malvzuco foi criada no ano de 2008 quando ouve uma licitação para empresas
+                na cidade de iperó com intuito de contratar empresas para prestação serviços de
+                manutenção nas escolas da cidade. Com a prestação de serviços nas escolas surgiu a
+                ideia de prestar serviços além da prefeitura serviços de hidráulica, elétrica e
+                instalação e manutenção de ar condicionados para as pessoas que precisacem dos tais serviços.</p>
+            </div>
+
+          </div> <hr>
+        </ion-col>
+
+        <ion-col size-lg="8" size-md="10" size-sm="8">
+          
+          <div class="conteudo">
+            <div>
+              <img src="../../assets/icon/grafico.png" alt="">
+            </div>
+
+
+            <div class="text">
+              <div id="linha_vertical"></div>
+
+              <p>Empresa malvzuco foi criada no ano de 2008 quando ouve uma licitação para empresas
+                na cidade de iperó com intuito de contratar empresas para prestação serviços de
+                manutenção nas escolas da cidade. Com a prestação de serviços nas escolas surgiu a
+                ideia de prestar serviços além da prefeitura serviços de hidráulica, elétrica e
+                instalação e manutenção de ar condicionados para as pessoas que precisacem dos tais serviços.</p>
+            </div>
+
+          </div> 
+        </ion-col>
+
+      </ion-row>
+
+      <!-- <ion-row class="centro" >
         <ion-col class="conteudo" size-lg="3" size-md="12" size-sm="12">
           <ion-card>
             <img alt="Empresa" src="../../assets/icon/grafico.png" />
@@ -94,28 +166,28 @@
             </ion-card-content>
           </ion-card>
         </ion-col>
-      </ion-row>
+      </ion-row> -->
 
- 
+
 
 
       <ion-footer>
-        <ion-row >
+        <ion-row>
           <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
-            <h4>E-MAIL:</h4> 
+            <h4>E-MAIL:</h4>
             <h5>malvzuco@yahoo.com.br</h5> <br>
-   
-            <h4>TELEFONE:</h4> 
+
+            <h4>TELEFONE:</h4>
             <h5>+15 99762-6275</h5>
           </ion-col>
 
           <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
-            <h4 >MAPA DO SITE</h4>
+            <h4>MAPA DO SITE</h4>
             <div>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/contato">Contato</ion-button>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/contato">Contato</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
             </div>
           </ion-col>
 
@@ -123,20 +195,24 @@
             <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="imagem da logo">
           </ion-col>
 
-          
+
         </ion-row>
       </ion-footer>
- 
-      
+
+
     </ion-content>
   </div>
 
-  
+
   <!-- Rodapé -->
 
-  
+
   <!-- Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 </ion-content>
