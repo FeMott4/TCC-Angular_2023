@@ -1,28 +1,30 @@
 <ion-content [fullscreen]="true">
 
-  <!-- Barra de navegação --> 
-  
+  <!-- Barra de navegação -->
+
   <ion-menu contentId="main-content">
-    <ion-header class="fundo_menu" >
-      <ion-item >
-        <ion-title class="titulo1"><h1>Malvzuco</h1></ion-title> 
+    <ion-header class="fundo_menu">
+      <ion-item>
+        <ion-title class="titulo1">
+          <h1>Malvzuco</h1>
+        </ion-title>
       </ion-item>
     </ion-header>
     <ion-col class="menu_botao">
       <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
 
-      <ion-button class="botao"  shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
+      <ion-button class="botao" shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
 
-      <ion-button class="botao"  shape="round" expand="full" routerLink="/contato">Contato</ion-button>
-    
-      <ion-button class="botao"  shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
+      <ion-button class="botao" shape="round" expand="full" routerLink="/contato">Contato</ion-button>
+
+      <ion-button class="botao" shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
     </ion-col>
 
-  </ion-menu> 
+  </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar class="fundo_menu">
-        <ion-buttons slot="start" >
+        <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title><img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img"></ion-title>
@@ -32,73 +34,59 @@
     <!-- Corpo -->
     <ion-content class="ion-padding" class="cor_fundo">
 
-      <!-- primeira seção -->
-      <ion-row >
-        <ion-col class="informa" size-lg="12ho" size-sm="12">
-          <img width="70vh" height="70vh" src="https://img.icons8.com/external-smashingstocks-mixed-smashing-stocks/68/external-Form-audit-smashingstocks-mixed-smashing-stocks.png" alt="external-Form-audit-smashingstocks-mixed-smashing-stocks"/>
+      <ion-row class="conteudo">
+        <ion-col size-lg="6" size-md="12" size="12">
+          <div class="banner" >
+            <h1>Bem-Vindo a Malvzuco</h1>
+            <p>Cadastre-se para receber novidades sobre nossos serviços, promoções e muito mais!</p>
+
+          </div>
+        </ion-col>
+        <ion-col  size-lg="4" size-md="12" size="12">
+
+          <div >
+            <form class="content_form" #inserirClienteForm="ngForm" (ngSubmit)="inserirCliente(inserirClienteForm.value)">
+              
+                <ion-label>
+                  <h1>Cadastre-se</h1> 
+                </ion-label>
+                           
+                <ion-input label="Nome:" name="nome" ngModel type="text"></ion-input>
+                            
+                <ion-input label="E-mail:" name="email" ngModel type="text"></ion-input>
+                            
+                <ion-input label="Telefone:" name="telefone" ngModel type="text"></ion-input>
+              
+                <ion-button color="secondary" shape="round" expand="full" type="submit">cadastrar</ion-button>
+              
+            </form>
+          </div>
         </ion-col>
       </ion-row>
 
-      <!-- Formulario para cadastrar cliente -->
-      <ion-row class="formulario ion-justify-content-center">
-        <ion-col class="form" size="12" size-lg="6">
-          <form #inserirClienteForm="ngForm" (ngSubmit)="inserirCliente(inserirClienteForm.value)">
-            <ion-item>
-              <ion-label><h1>Cadastre-se</h1></ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-input label="Nome" name="nome" ngModel type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-              <ion-input label="E-mail" name="email" ngModel type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-              <ion-input label="Telefone" name="telefone" ngModel type="text"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-button shape="round" type="submit">cadastrar</ion-button>
-            </ion-item>
-            <!-- <ion-item >
-              <ion-button color="light" slot="end" type="submit">Ca</ion-button>
-            </ion-item> -->
-          </form>
-        </ion-col>
-      </ion-row>
-      
 
 
 
 
 
-
-
-
-      
-      <!-- <ion-row class="imagem">
-        <ion-col size-lg="12" size-md="12" size="12">
-          <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="img">
-        </ion-col>
-      </ion-row> -->
-
+      <!-- footer -->
       <ion-footer>
-        <ion-row >
+        <ion-row>
           <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
-            <h4>E-MAIL:</h4> 
+            <h4>E-MAIL:</h4>
             <h5>malvzuco@yahoo.com.br</h5> <br>
-   
-            <h4>TELEFONE:</h4> 
+
+            <h4>TELEFONE:</h4>
             <h5>+15 99762-6275</h5>
           </ion-col>
 
           <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
-            <h4 >MAPA DO SITE</h4>
+            <h4>MAPA DO SITE</h4>
             <div>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/contato">Contato</ion-button>
-              <ion-button class="botao"  shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/contato">Contato</ion-button>
+              <ion-button class="botao" shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
             </div>
           </ion-col>
 
@@ -106,15 +94,15 @@
             <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="imagem da logo">
           </ion-col>
 
-          
-        </ion-row> 
+
+        </ion-row>
       </ion-footer>
     </ion-content>
   </div>
-  
+
 
   <!-- Rodapé -->
 
-  
-  
+
+
 </ion-content>
