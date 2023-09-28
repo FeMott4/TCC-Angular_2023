@@ -5,6 +5,8 @@ import { Storage, getDownloadURL, ref, uploadBytesResumable } from '@angular/fir
 import { MessageService } from '../services/message.service';
 
 
+
+
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.page.html',
@@ -26,6 +28,7 @@ export class ClientesPage implements OnInit {
 
   isLoading: boolean = false;
   nome_usuario: any;
+  private _messageService: any;
 
   constructor(
     public _authenticate: AuthenticateService,
@@ -34,14 +37,34 @@ export class ClientesPage implements OnInit {
     private _message: MessageService
   ) { }
 
+  validaEmail(email:any) {
+    // expressão regular
+    var validaemail =  /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    return validaemail.test(String(email).toLowerCase());
+   }
+
+  validaTelefone(telefone:any) {
+    var re = /^[0-9]{2,3}[9]{1}[0-9]{4,4}$/ ;
+    return re.test(telefone);
+   }
+
   inserirCliente(dados: any){
     this.cliente.nome = dados.nome;
     this.cliente.email = dados.email;
     this.cliente.telefone = dados.telefone;
-    // this.aluno.idade = 10;
-    // this.aluno.ra = 321321;
 
-    this._crudService.insert(this.cliente, 'cliente');
+    if (this.validaEmail(this.cliente.email)) {
+      this._crudService.insert(this.cliente, 'cliente');
+   } else {
+      if (!this.validaEmail(this.cliente.email)) {
+        this._message.error('E-mail inválido');
+      }
+  
+       if (!this.validaTelefone(this.cliente.telefone)) {
+         this._message.error('Número de telefone inválido');
+       }
+   }
+
   }
 
   

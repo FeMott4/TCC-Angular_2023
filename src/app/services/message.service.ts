@@ -7,6 +7,7 @@ import { ToastController } from '@ionic/angular';
 
 export class MessageService {
 
+
     constructor( 
         private _toastController: ToastController
     ) { }
@@ -15,6 +16,13 @@ export class MessageService {
         this._toastController.create({
             message: message,
             duration: duration
+        }).then(toast => toast.present());
+    }
+    public error(message: any, duration = 3000 || undefined) {
+        this._toastController.create({
+            message: message,
+            duration: duration,
+            cssClass: 'error-toast'
         }).then(toast => toast.present());
     }
 }
