@@ -1,10 +1,9 @@
 *{
-    color: white;
+
   }
   // cor de fundo
   .cor_fundo{
-    --ion-background-color:rgb(34,132,230);;
-    --ion-background-color:radial-gradient(circle, rgba(34,132,230,1) 0%, rgba(27,103,179,1) 22%, rgba(19,73,128,1) 60%, rgba(11,44,77,1) 100%);
+    --ion-background-color:white;
   }
   
   // Menu fundo de dentro
@@ -37,26 +36,56 @@
   }  
   
   // Page
-  .conteudo{
-    text-align: center;
-    margin-top:4vh;
+  .container{
+    display: flex;
+    justify-content: space-around;
   }
+  .conteudo{
+
+    text-align: center;
+    margin-top: 4vh;
+  
+  }
+
   
   // mapa
-  .mapa{
-    max-width: 60vh;
-    min-width: 30vh;
-    max-height: 60vh;
-    min-height: 30vh;
+  .map{
+    background-color: #0B2C4D;
+    border-radius: 2vh ;
+    padding: 2vh;
+ 
+
+  }
+  .map svg{
+    color:white;
     margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  .mapa{
+ 
+ 
+    max-width: 50vh;
+    min-width: 30vh;
+    max-height: 50vh;
+    min-height: 30vh;
+   
+
+  
   }
   
   // Contato whats
+  .conteudo_whats{
+    color: black;
+  }
+  .conteudo_whats svg{
+    color: black;
+  }
   .link_whats a p{
     color: white;
     text-decoration: none;
   }
   
+
   // footer
   ion-footer{
     margin-top:10vh;
