@@ -3,8 +3,9 @@
   }
   // cor de fundo
   .cor_fundo{
-    --ion-background-color:rgb(34,132,230);;
-    --ion-background-color:radial-gradient(circle, rgba(34,132,230,1) 0%, rgba(27,103,179,1) 22%, rgba(19,73,128,1) 60%, rgba(11,44,77,1) 100%);
+    --ion-background-color:white;
+    // --ion-background-color:rgb(34,132,230);;
+    // --ion-background-color:radial-gradient(circle, rgba(34,132,230,1) 0%, rgba(27,103,179,1) 22%, rgba(19,73,128,1) 60%, rgba(11,44,77,1) 100%);
   }
   
   // Menu fundo parte de dentro
@@ -41,15 +42,22 @@
     margin-top: 1vh;
     display: flex;
     justify-content: center;
+    color: black;
     font-size: 6vh;
     font-weight: 1000;
     font-family: poupins;
     border-bottom: 0.3vh solid #0B2C4D;
+
   } 
   .servico_informacao{
     margin-bottom: 25vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+
+  }
+  .conteudo-card{
+    display: flex;
+    justify-content: center;
   }
   
   // Cards
@@ -57,19 +65,28 @@
     margin-top: 3vh;
     border: 0.5vh solid #0B2C4D;
     border-radius: 1vh;
-    max-height:70vh;
+    max-height:85vh;
     min-height:60vh;
+    min-width: 40vh;
+    max-width: 50vh;
     text-align: center;
     
   }
   ion-card ion-card-title h1{
     text-align: center;
+    color: black;
+    margin-bottom: 1vh;
+  }
+  
+  ion-card-content p{
+    color: black;
+    font-size: large;
   }
   
   // imagem card
   ion-card img{
-    max-height: 40vh;
-    min-height: 40vh;
+    max-height: 45%; 
+    min-height: 20%;
     min-width: 60%;
     max-width: 80%;
     padding: 4vh;
@@ -79,7 +96,9 @@
   
   // footer
   ion-footer{
+    margin-top:10vh;
     padding: 5vh;
+    color: white;
     background: rgb(4,15,26);
     background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
   }
@@ -87,10 +106,9 @@
     text-align: center;
     font-family: arial;
   }
-  .imagem img img{
-    width: 20vh;
-    min-width: 10vh;
-    text-align: center;
+  .imagem img{
+    width: 50vh;
+    min-width: 30vh;
   }
   
   

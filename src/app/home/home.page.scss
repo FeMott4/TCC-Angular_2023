@@ -60,6 +60,7 @@ ion-button {
 }
 
 // Css page
+
 .conteudo{
   display: flex;
   justify-content: center;
@@ -74,7 +75,7 @@ ion-button {
 
   
 }
-/* css linha vertical */
+/* css linha vertical */ 
 
  #linha_vertical{
   height: 30vh;
@@ -146,6 +147,7 @@ hr{
 ion-footer{
   margin-top:10vh;
   padding: 5vh;
+  color: white;
   background: rgb(4,15,26);
   background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
 }
