@@ -40,4 +40,17 @@
       </ion-list>
     </ion-col>
   </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="listar()">Listar</ion-button>
+      <ion-list>
+        <ion-item *ngFor = "let horario of this.horarios">
+          <ion-label>
+            {{horario.funcionario_id}} 
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
 </ion-content>

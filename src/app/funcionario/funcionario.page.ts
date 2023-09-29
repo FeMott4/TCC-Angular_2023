@@ -16,6 +16,8 @@ export class FuncionarioPage implements OnInit {
   }
   funcionarios:any=[]
 
+  horarios:any=[]
+
   constructor(
     private _crudService: CrudService,
     private _message: MessageService
@@ -38,6 +40,14 @@ export class FuncionarioPage implements OnInit {
     .then((dados)=>{
       console.log(dados)
       this.funcionarios=dados
+
+    })
+  }
+  recuperarhorario(){
+    this._crudService.fetchAll("horarios")
+    .then((dados)=>{
+      console.log(dados)
+      this.horarios=dados
 
     })
   }
