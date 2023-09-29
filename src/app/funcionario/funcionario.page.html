@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>funcionario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <form class="content_form" #inserirFuncionarioForm="ngForm" (ngSubmit)="inserirFuncionario(inserirFuncionarioForm.value)">
+              
+        <ion-label>
+          <h1>Cadastre-se</h1> 
+        </ion-label>
+                   
+        <ion-input label="Nome:" name="nome" ngModel type="text"></ion-input>
+                    
+        <ion-input label="Função:" name="funcao" ngModel type="text"></ion-input>
+                          
+        <ion-button color="secondary" shape="round" expand="full" type="submit">cadastrar</ion-button>
+      
+    </form>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="listar()">Listar</ion-button>
+      <ion-list>
+        <ion-item *ngFor = "let funcionario of this.funcionarios" (click)="definirHora(funcionario)">
+          <ion-label>
+            {{funcionario.id}} 
+          </ion-label>
+          <ion-label>
+            {{funcionario.nome}}
+          </ion-label>
+          <ion-label>
+            {{funcionario.funcao}}
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>
