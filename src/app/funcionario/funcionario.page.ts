@@ -66,5 +66,9 @@ export class FuncionarioPage implements OnInit {
     this.recuperarFuncionarios()
   }
 
+  listarhorario(){
+    this.recuperarhorario()
+  }
+
 
 }
