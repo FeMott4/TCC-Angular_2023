@@ -1,0 +1,45 @@
+// CSS menu title
+ion-header {
+    --ion-toolbar-background: #0B2C4D;
+    
+}
+ion-header ion-title{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+
+// Css cadastro funcionario
+.cadastro_funcionario{
+    display: flex;
+    justify-content: center;
+}
+.content_form{
+    margin-top: 3vh;
+    border: 2px solid #0B2C4D;
+    border-radius: 3vh;
+    padding: 2vh;
+}
+.content_form  h1{
+    font-size: xx-large;
+    text-align: center;
+    border-bottom: 1px solid #040F1A;
+}
+
+// Seção listar funcionario
+.listar{
+    display: flex;
+    justify-content: center;
+}
+.secao_listar{
+    margin-top: 3vh;
+    
+}
+.lista_funcionario{
+    border: 2px solid #040F1A;
+    border-radius: 3vh;
+}
+.lista_funcionario ion-label{
+    font-size: medium;
+    text-align: center;
+}
