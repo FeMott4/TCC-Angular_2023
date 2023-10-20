@@ -1,5 +1,5 @@
 * {
- 
+//  border: 1px solid red;
 }
 
 // Cor de fundo 
@@ -52,6 +52,8 @@ ion-button {
  
 }
 .banner{
+  display: flex;
+  justify-content: center;
   margin-top: 10vh;
   color: black;
   text-align: center;
@@ -59,12 +61,72 @@ ion-button {
   
 }
 
+
 // css form
+.centro_form{
+  display: flex;
+  justify-content: center;
+}
 .content_form {
+  
   background-color: #0B2C4D;
   border: 0.7vh solid #040F1A;
   border-radius: 3vh;
   padding: 3vh;
+
+
+}
+// CSS calendario
+.conteudo_calendario{
+  display: flex;
+  justify-content: center;
+}
+.calendario{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid #040F1A;
+  border-radius: 2vh;
+  color: black;
+  background-color: white;
+}
+
+// Escolha do funcionario e horario
+.selecao{
+  display: flex;
+  justify-content: center;
+}
+.selecao ion-list{
+ 
+  background-color: white;
+  color: black;
+}
+.fundo_item .bota_horario{
+  display: flex;
+
+}
+ion-accordion-group{
+
+  max-width: 40vh;
+  min-width: 40vh;
+}
+.funcionario_aba{
+  text-align: center;
+  max-width: 90%;
+  min-width: 90%;
+  
+}
+
+.escolha_funcionario {
+  background-color: white;
+  color: black;
+}
+.funcionario{
+  color: black;
+}
+// horario
+
+ion-list h5{
+  text-align: center;
 }
 
 form h1{

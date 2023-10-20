@@ -12,29 +12,39 @@ export class FuncionarioPage implements OnInit {
   funcionario={
     nome:'',
     funcao:'',
-
+    horarios:[
+      {hora:'',bloqueado:false}
+    ]
   }
   funcionarios:any=[]
 
   horarios:any=[]
 
+  horario={hora:'',bloqueado:false}
+
+
+// cadastro de horario
+  cadastrarHorario(){
+    this.funcionario.horarios.push(this.horario)
+    console.log(this.funcionario)
+    this.horario={hora:'',bloqueado:false}
+  }
+
   constructor(
     private _crudService: CrudService,
     private _message: MessageService
   ) {
-  
+  this.funcionario.horarios.splice(0,1)
    }
 
   ngOnInit() {
     // this.recuperarFuncionarios()
   }
-
-  inserirFuncionario(dados:any){
-    this.funcionario.nome=dados.nome;
-    this.funcionario.funcao=dados.funcao;
-    this._crudService.insert(this.funcionario,"funcionario")
-    this.recuperarFuncionarios()
+  // Inserir Funcionario
+  inserirFuncionario(){
+    this._crudService.insert(this.funcionario,'funcionario')
   }
+// recupera os dados dos funcionarios
   recuperarFuncionarios(){
     this._crudService.fetchAll("funcionario")
     .then((dados)=>{
@@ -43,6 +53,7 @@ export class FuncionarioPage implements OnInit {
 
     })
   }
+  // Pega os horarios do firebase
   recuperarhorario(){
     this._crudService.fetchAll("horarios")
     .then((dados)=>{
@@ -51,6 +62,7 @@ export class FuncionarioPage implements OnInit {
 
     })
   }
+  // Defini uma horario
   definirHora(funcionario:any){
     console.log(funcionario)
     localStorage.setItem("funcionario",JSON.stringify(funcionario))

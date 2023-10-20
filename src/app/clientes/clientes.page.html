@@ -35,32 +35,115 @@
     <ion-content class="ion-padding" class="cor_fundo">
 
       <ion-row class="conteudo">
-        <ion-col  class="justify-content-center" size-lg="6" size-md="12" size="12">
-          <div class="banner" >
-            <h1>Bem-Vindo a Malvzuco</h1>
+        <ion-col  class="banner justify-content-center" size-lg="6" size-md="10" size="12">
+         
+            <div class="text_banner">
+              <h1>Bem-Vindo a Malvzuco</h1>
             <p>Cadastre-se para receber novidades sobre nossos serviços, promoções e muito mais!</p>
-
-          </div>
+            </div>
+          
         </ion-col>
-        <ion-col  size-lg="4" size-md="12" size="12">
+        <ion-col  size-lg="6" size-md="10" size="12">
 
-          <div >
-            <form class="content_form" #inserirClienteForm="ngForm" (ngSubmit)="inserirCliente(inserirClienteForm.value)">
+          <ion-row  class="centro_form">
+            <ion-col  size-lg="8" size-md="8" size="12">
+              <form class="content_form">
               
                 <ion-label>
                   <h1>Cadastre-se</h1> 
                 </ion-label>
                            
-                <ion-input label="Nome:" name="nome" ngModel type="text"></ion-input>
+                <ion-input label="Nome:" [(ngModel)]="this.cliente.nome" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
                             
-                <ion-input label="E-mail:" name="email" ngModel type="text"></ion-input>
+                <ion-input label="E-mail:" [(ngModel)]="this.cliente.email" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
                             
-                <ion-input label="Telefone:" name="telefone" ngModel type="text"></ion-input>
+                <ion-input label="Telefone:" [(ngModel)]="this.cliente.telefone" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
               
-                <ion-button color="secondary" shape="round" expand="full" type="submit">cadastrar</ion-button>
+                <ion-input label="Descrição:" [(ngModel)]="this.cliente.descricao" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
+
+                
+
+                <!-- seleção do funcionarios -->
+                <div class="selecao">
+                  <ion-accordion-group  expand="inset">
+                    <ion-accordion>
+                      <ion-item slot="header" color="white" class="escolha_funcionario">
+                        <h5>Escolha um funcionário</h5>
+                      </ion-item>
+                      <div class="ion-padding" slot="content">
+                        <!-- calendario -->
+                        <div class="conteudo_calendario">
+                          <ion-datetime class="calendario" presentation="date" (ionChange)="definirData($event)"></ion-datetime>
+                        </div>
+                        <!-- escolha o funcionario -->
+                        <ion-accordion-group expand="inset" class="funcionario_aba">
+                          <ion-accordion value="first">
+                            <ion-item slot="header" color="white"  class="funcionario">
+                              <ion-label>Funcionário</ion-label>
+                            </ion-item>
+                            <div class="ion-padding" slot="content">
+                              <ion-list>
+                                <ng-container *ngFor="let funcionario of this.funcionarios">
+                                   <div >
+                                    <ion-button expand="full" shape="round" (click)="selecionarFuncionario(funcionario)">{{funcionario.nome}}</ion-button>
+                                   </div>
+                                  
+                                </ng-container>
+                                
+                              </ion-list>
+                            </div>
+                          </ion-accordion>
+                          
+                        </ion-accordion-group>
+                        
+  
+                        <!-- escolha o horario -->
+                        <ion-list>
+                          <h5>Horários</h5>
+                          <ng-container *ngFor="let horario of this.horarios">
+                           <ng-container *ngIf="horario.bloqueado==false">
+                            <div class="fundo_item">
+                              <ion-button class="bota_horario" (click)="selecionarHorario(horario)">{{horario.hora}}</ion-button>
+                            </div>
+                           
+                           </ng-container>                    
+                          </ng-container>
+                          
+                        </ion-list>
+                      </div>
+                    </ion-accordion>
+                  </ion-accordion-group>
+                </div>
+                
+                
+                <!-- <ion-list>
+                  <ng-container *ngFor="let funcionario of this.funcionarios">
+                    <ion-item>
+                      <ion-button (click)="selecionarFuncionario(funcionario)">{{funcionario.nome}}</ion-button>
+                    </ion-item>
+                  </ng-container>
+                  
+                </ion-list>
+
+                <ion-item-divider></ion-item-divider>
+
+                <ion-list>
+                  <ng-container *ngFor="let horario of this.horarios">
+                   <ng-container *ngIf="horario.bloqueado==false">
+                    <ion-item>
+                      <ion-button (click)="selecionarHorario(horario)">{{horario.hora}}</ion-button>
+                    </ion-item>
+                   </ng-container>                    
+                  </ng-container>
+                  
+                </ion-list> -->
+                
+                <ion-button color="secondary" shape="round" expand="full" (click)="inserirCliente()">AGENDAR</ion-button>
               
             </form>
-          </div>
+            </ion-col>
+          </ion-row>
+
         </ion-col>
       </ion-row>
 
