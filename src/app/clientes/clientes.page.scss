@@ -115,7 +115,15 @@ ion-accordion-group{
   min-width: 90%;
   
 }
-
+// CSS checkbox
+.selecao ion-item{
+  --background:white;
+  color: black;
+  padding: 0.5vh;
+}
+.selecao ion-checkbox:hover{
+  color:blue;
+}
 .escolha_funcionario {
   background-color: white;
   color: black;

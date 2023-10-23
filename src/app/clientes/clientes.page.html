@@ -85,7 +85,12 @@
                               <ion-list>
                                 <ng-container *ngFor="let funcionario of this.funcionarios">
                                    <div >
-                                    <ion-button expand="full" shape="round" (click)="selecionarFuncionario(funcionario)">{{funcionario.nome}}</ion-button>
+                                    <ion-item class="ckeck">
+                                      <ion-checkbox justify="space-between" (click)="selecionarFuncionario(funcionario)" >{{funcionario.nome}}</ion-checkbox>
+
+                                    </ion-item>
+
+                                    <!-- <ion-button expand="full" shape="round" (click)="selecionarFuncionario(funcionario)">{{funcionario.nome}}</ion-button> -->
                                    </div>
                                   
                                 </ng-container>
@@ -102,9 +107,12 @@
                           <h5>Horários</h5>
                           <ng-container *ngFor="let horario of this.horarios">
                            <ng-container *ngIf="horario.bloqueado==false">
-                            <div class="fundo_item">
-                              <ion-button class="bota_horario" (click)="selecionarHorario(horario)">{{horario.hora}}</ion-button>
-                            </div>
+                            
+                              <ion-item class="ckeck">
+                                <ion-checkbox justify="space-between" (click)="selecionarHorario(horario)">{{horario.hora}}</ion-checkbox>
+                              </ion-item>
+                              <!-- <ion-button class="bota_horario" (click)="selecionarHorario(horario)">{{horario.hora}}</ion-button> -->
+                          
                            
                            </ng-container>                    
                           </ng-container>

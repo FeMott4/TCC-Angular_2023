@@ -14,6 +14,8 @@ import { MessageService } from '../services/message.service';
 })
 export class ClientesPage implements OnInit {
 
+
+
   Cliente = [];
 
   nome = 'Joaozinho';
@@ -60,7 +62,7 @@ export class ClientesPage implements OnInit {
     private _message: MessageService
   ) { 
     this.getFuncionarios()
-    this.getNumber
+    this.getNumber()
     this.horarios.splice(0,1)
   }
   // Defini uma data disponivel
@@ -93,8 +95,8 @@ export class ClientesPage implements OnInit {
 
   //Função que manda mensagem pro cliente
   getNumber(){
-    
-  } 
+  }
+ 
 
 
   // Validação de E-mail
@@ -111,20 +113,20 @@ export class ClientesPage implements OnInit {
 
   inserirCliente(){
 
-    // this._crudService.insert(this.cliente, 'cliente');
+    //  this._crudService.insert(this.cliente, 'cliente');
 
     // Para teste comentar esse código e descomentar o de cima 
-     if (this.validaEmail(this.cliente.email)) {
-        this._crudService.insert(this.cliente, 'cliente');
-    } else {
-       if (!this.validaEmail(this.cliente.email)) {
-         this._message.error('E-mail inválido');
-       }
-  
-        if (!this.validaTelefone(this.cliente.telefone)) {
-          this._message.error('Número de telefone inválido');
+      if (this.validaEmail(this.cliente.email)) {
+         this._crudService.insert(this.cliente, 'cliente');
+     } else {
+        if (!this.validaEmail(this.cliente.email)) {
+          this._message.error('E-mail inválido');
         }
-    }
+  
+         if (!this.validaTelefone(this.cliente.telefone)) {
+           this._message.error('Número de telefone inválido');
+         }
+     }
 
   }
 
