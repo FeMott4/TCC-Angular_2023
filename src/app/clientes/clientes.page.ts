@@ -51,6 +51,7 @@ export class ClientesPage implements OnInit {
   isLoading: boolean = false;
   nome_usuario: any;
   private _messageService: any;
+  telefone: any;
 
   constructor(
     public _authenticate: AuthenticateService,
@@ -59,6 +60,7 @@ export class ClientesPage implements OnInit {
     private _message: MessageService
   ) { 
     this.getFuncionarios()
+    this.getNumber
     this.horarios.splice(0,1)
   }
   // Defini uma data disponivel
@@ -88,6 +90,11 @@ export class ClientesPage implements OnInit {
       this.funcionarios=funcionarios
     })
   }
+
+  //Função que manda mensagem pro cliente
+  getNumber(){
+    
+  } 
 
 
   // Validação de E-mail
@@ -124,6 +131,8 @@ export class ClientesPage implements OnInit {
   
 
   ngOnInit() {
+   
   }
+
 
 }

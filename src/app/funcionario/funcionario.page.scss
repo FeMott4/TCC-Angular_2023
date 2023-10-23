@@ -1,3 +1,9 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fundo{
+    --background: white;
+}
 // CSS menu title
 ion-header {
     --ion-toolbar-background: #0B2C4D;
@@ -15,6 +21,7 @@ ion-header ion-title{
     justify-content: center;
 }
 .content_form{
+    color: black;
     margin-top: 3vh;
     border: 2px solid #0B2C4D;
     border-radius: 3vh;
@@ -30,6 +37,9 @@ ion-header ion-title{
 .listar{
     display: flex;
     justify-content: center;
+}
+.listar ion-item{
+    --background-color: white;
 }
 .secao_listar{
     margin-top: 3vh;
