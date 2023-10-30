@@ -6,44 +6,41 @@
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <!-- Barra de navegação -->
-
-
-  <ion-menu contentId="main-content">
-    <ion-header class="fundo_menu">
-      <ion-item>
-        <ion-title class="titulo1">
-          <h1>Malvzuco</h1>
-        </ion-title>
-      </ion-item>
-    </ion-header>
-
-    <ion-col class="menu_botao">
-      <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
-
-      <ion-button class="botao" shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
-
-      <ion-button class="botao" shape="round" expand="full" routerLink="/contato">Contato</ion-button>
-
-      <ion-button class="botao" shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
-    </ion-col>
-
-  </ion-menu>
-
   <div class="ion-page" id="main-content">
     <ion-header>
-      <ion-toolbar class="fundo_menu">
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title><img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img"></ion-title>
 
-      </ion-toolbar>
+      <ion-row class="menu_color">
+        <ion-col class="logo_menu" size="3">
+          <img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img">
+        </ion-col>
+        <ion-col class="link_menu">
+          <ul class="nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  routerLink="/clientes">Agendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/servico">Serviço</a>
+            </li>
+            
+          </ul>
+        </ion-col>
+      </ion-row>
 
     </ion-header>
 
     <!-- Corpo -->
 
     <ion-content class="ion-padding" class="cor_fundo">
+
+      <ion-row>
+       
+      </ion-row>
 
       <ion-row class="justify-content-center">
 
@@ -195,7 +192,9 @@
           </ion-col>
 
           <ion-col class="imagem" size-lg="6" size-md="10" size-sm="12">
-            <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="imagem da logo">
+            <div class="logo_footer">
+              <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="imagem da logo">
+            </div>
           </ion-col>
 
 

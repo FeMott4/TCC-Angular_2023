@@ -1,19 +1,47 @@
-*{
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 
-  }
-  // cor de fundo
-  .cor_fundo{ 
-    --ion-background-color:white;
-  }
   
-  // Menu fundo de dentro
-  .fundo_menu{
-    --ion-toolbar-background:#0B2C4D;
-    --ion-item-background:#040F1A;
-  }
-  ion-button{ 
-    --background:#0B2C4D; 
-  }
+   border: 1px solid red;
+
+}
+
+// cor de fundo
+ .cor_fundo {
+  --ion-background-color:white;
+} 
+
+// css menu
+ion-menu {
+  position: fixed;
+}
+
+// Menu 
+.menu_color{
+  background-color: #03258C;
+  padding: 1vh 1vh 1vh 1vh;
+}
+.logo_menu{
+  display: flex;
+  justify-content: start;
+}
+.link_menu{
+  display: flex;
+  justify-content: end;
+  flex-wrap: nowrap;
+}
+.link_menu a{
+  color: white;
+  font-size: large;
+}
+.link_menu a:hover{
+  color:#cbdcfe;
+  border-bottom: 1px solid #73020C;
+  font-size:larger;
+  cursor: pointer;
+}
   .menu_botao{
     background: rgb(4,15,26);
     background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
@@ -49,7 +77,7 @@
 
   
   // mapa
-  .map{
+  .map_container{
     margin-left: auto;
     margin-right: auto;
     background-color: #0B2C4D;
@@ -68,7 +96,7 @@
   .mapa{
     border-radius: 2vh; 
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     max-width: 45vh;
     min-width: 30vh;
     max-height: 45vh;
@@ -92,19 +120,27 @@
 
   // footer
   ion-footer{
-    color: white;
     margin-top:10vh;
     padding: 5vh;
-    background: rgb(4,15,26);
-    background: linear-gradient(190deg, rgba(4,15,26,1) 0%, rgba(11,44,77,1) 35%, rgba(19,73,128,1) 100%);
-  }
+    color: white;
+    background: rgb(3,37,140);
+    background: radial-gradient(circle, rgba(3,37,140,1) 11%, rgba(3,43,150,1) 45%, rgba(2,15,89,1) 93%);
+    }
   .info-footer{
     text-align: center;
     font-family: arial;
   }
+  // botao mapa do site
+  .info-footer .botao{
+    --background:#020F59;
+  }
   .imagem img{
     width: 50vh;
     min-width: 30vh;
+  }
+  .logo_footer{
+    display: flex;
+    justify-content: center;
   }
   
     
