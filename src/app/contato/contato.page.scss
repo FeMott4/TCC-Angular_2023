@@ -4,7 +4,7 @@
   font-family: Arial, Helvetica, sans-serif;
 
   
-   border: 1px solid red;
+  
 
 }
 
@@ -77,15 +77,18 @@ ion-menu {
 
   
   // mapa
+  .conteudo_map{
+    display: flex;
+    justify-content: center;
+  }
   .map_container{
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #0B2C4D;
+    
+    background-color: #03258C;
     border-radius: 2vh ;
     padding: 1vh 1vh 1vh 1vh;
-    max-width: 48vh;
-    min-width: 48vh;
-    max-height: 70vh;
+    max-width: 50vh;
+    min-width: 50vh;
+    max-height: 55vh;
 
   }
   .map svg{
@@ -94,13 +97,10 @@ ion-menu {
     margin-bottom: 2vh;
   }
   .mapa{
+    margin-top: 1vh;
     border-radius: 2vh; 
-    margin-left: auto;
-    margin-right: auto; 
-    max-width: 45vh;
-    min-width: 30vh;
-    max-height: 45vh;
-    min-height: 30vh;
+    max-width: 100%;
+    max-height: 90%;
   }
   
   // Contato whats

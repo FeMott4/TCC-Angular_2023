@@ -43,124 +43,103 @@ ion-menu {
   cursor: pointer;
 }
 
-ion-button {
-  --background: #0B2C4D;
-}
-
-.menu_botao {
-  background: rgb(4, 15, 26);
-  background: linear-gradient(190deg, rgba(4, 15, 26, 1) 0%, rgba(11, 44, 77, 1) 35%, rgba(19, 73, 128, 1) 100%);
-}
-
-// titulo Css
-.titulo1 {
-  margin-top: 1vh;
-  margin-bottom: 3vh;
-  color: white;
-  text-align: center;
-}
-
 // menu superior
 .logo {
   height: 5vh;
+ }
+
+// CSS page
+
+// primeira seção apresentação
+.secao-apresentacao{
+
+  // imagem
+  background:url('https://i1.wp.com/www.servicoemdestaque.com.br/wp-content/uploads/2022/07/eletricista-predial.jpg?fit=1313%2C553&ssl=1') no-repeat;
+  background-size:cover;
+  object-fit: cover;
+   max-width: 100%;
+   min-width: 100%;
+   max-height: 75vh;
+   min-height: 75vh;
+}
+.container{
+  margin-top: auto;
+  margin-bottom: auto; 
+}
+.saiba_mais_container{
+  height: 95%;
+  background-color: white;
+  box-shadow:
+  rgba(60,64,67,0.3) 0px 1px 2px 0px,
+  rgba(60,64,67,0.15) 0px 2px 6px 2px;
+
+  padding: 4vh 3vh 4vh 3vh;
+  border-radius: 2vh;
+}
+.saiba_mais_container .title_saiba_mais{
+  color: #03258C;
+  font-weight: bolder;
+ 
+}
+.saiba_mais_container p{
+  color: rgba(0, 0, 0, 0.616);
+  margin-top: 2vh;
+  margin-bottom: 4vh;
 }
 
+// seção serviço
+.secao_servico{
+
+  margin-top: 10vh;
+}
+.secao_servico .imagem_lateral{
+  display: flex;
+  justify-content: center;
+}
+.secao_servico .imagem_lateral img{
+  object-fit: cover;
+  width: 80%;
+  height: 55vh;
+  border-radius: 2vh;
+  box-shadow:
+  rgba(60,64,67,0.3) 0px 1px 2px 0px,
+  rgba(60,64,67,0.15) 0px 2px 6px 2px;
+
+}
+// Css texto serviço
+.texto_lateral{
+  padding: 2vh 0 0 5vh;
+}
+.secao_servico .texto_lateral .text h2{
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+color: #03258C;
+font-weight: bold;
+}
+.secao_servico .texto_lateral .text li{
+  color: rgba(0, 0, 0, 0.616);
+  list-style: none;
+  padding: 1vh 0 0 3vh;
+
+}
+.secao_servico .texto_lateral .text li svg{
+  color: green;
+  width: 5vh;
+}
+.secao_servico .texto_lateral .botao_servico{
+  margin-top: 4vh;
+}
+
+
+
+
+// footer
 .botao {
   width: 100%;
   margin-bottom: 2vh;
   color: white;
   margin-top: 1vh;
 }
-
-.titulo_nav {
-  color: white;
-}
-
-// Css page
-
-.conteudo{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 10vh;
-
-}
-.conteudo img{
-  width: 45vh;
-  height: 30vh;
-  margin-bottom: 2vh;
-
-  
-}
-/* css linha vertical */ 
-
- #linha_vertical{
-  height: 30vh;
-  border-right: 1px solid blue;
-  margin-right: 2vh;
-   margin-left: 1vh;
- }
-
-.text{
-  display: flex;
-  min-width: 45vh;
-  max-width: 75vh;
-}
-.text p{
-  text-align: center;
-  align-items: center;
-  color: black;
-}
-
-hr{
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-}
-
-
-
-
-
-
-// // cards
-// .centro{
-//   margin-top: 5vh;
-//   display: flex;
-//   justify-content: space-around;
-// }
-
-// ion-card{
-//   margin-bottom: 6vh;
-//   max-height:110vh;
-//   min-height:80vh;
-//   text-align: center;
-// }
-// // card imagens
-// ion-card img{
-//   max-height: 40vh;
-//   min-height: 30vh;
-//   min-width: 30%;
-//   max-width: 80%;
-//   padding: 4vh;
-// }
-
-// // textos
-// ion-card h1{
-//   margin-top: 1vh;
-//   margin-bottom: 0.5vh;
-//   text-align: center;
-//   font-weight: bold;
-//   color: white;
-//   padding: 3vh;
-// }
-
-// ion-card ion-card-content{
-//   font-size: medium;
-//   color: white;
-//   padding: 3vh;
-// } 
-
-// footer
 ion-footer{
   margin-top:10vh;
   padding: 5vh;
