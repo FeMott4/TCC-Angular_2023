@@ -3,15 +3,15 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 
-  
+
   // border: 1px solid red;
 
 }
 
 // cor de fundo
- .cor_fundo {
-  --ion-background-color:white;
-} 
+.cor_fundo {
+  --ion-background-color: white;
+}
 
 // css menu
 ion-menu {
@@ -19,143 +19,175 @@ ion-menu {
 }
 
 // Menu 
-.menu_color{
+.menu_color {
   background-color: #03258C;
-  padding: 1vh 1vh 1vh 1vh;
+  padding: 1vh 2vh 1vh 2vh;
 }
-.logo_menu{
+
+.logo_menu {
   display: flex;
   justify-content: start;
+  margin: auto;
 }
-.link_menu{
+.logo_menu img{
+  width: 50%;
+}
+
+.link_menu {
   display: flex;
-  justify-content: end;
-  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
-.link_menu a{
+
+.link_menu a {
   color: white;
   font-size: large;
 }
-.link_menu a:hover{
-  color:#cbdcfe;
+
+.link_menu a:hover {
+  color: #cbdcfe;
   border-bottom: 1px solid #73020C;
-  font-size:larger;
+  font-size: larger;
   cursor: pointer;
 }
 
-// menu superior
-.logo {
-  height: 5vh;
- }
+
+
 
 // CSS page
 
 // primeira seção apresentação
-.secao-apresentacao{
+.secao-apresentacao {
 
   // imagem
-  background:url('https://i1.wp.com/www.servicoemdestaque.com.br/wp-content/uploads/2022/07/eletricista-predial.jpg?fit=1313%2C553&ssl=1') no-repeat;
-  background-size:cover;
+  background: url('https://i1.wp.com/www.servicoemdestaque.com.br/wp-content/uploads/2022/07/eletricista-predial.jpg?fit=1313%2C553&ssl=1') no-repeat;
+  background-size: cover;
   object-fit: cover;
-   max-width: 100%;
-   min-width: 100%;
-  //  max-height: 75vh;
-  //  min-height: 75vh;
+  max-width: 100%;
+  min-width: 100%;
+
 }
-.container{
+
+.container {
   margin-top: auto;
   margin-bottom: auto;
-  padding: 10vh 0 ; 
+  padding: 15vh 0;
 }
-.saiba_mais_container{
-  height: 95%;
+
+.saiba_mais_container {
+  height: 100%;
   background-color: white;
   box-shadow:
-  rgba(60,64,67,0.3) 0px 1px 2px 0px,
-  rgba(60,64,67,0.15) 0px 2px 6px 2px;
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
   padding: 4vh 3vh 4vh 3vh;
   border-radius: 2vh;
 }
-.saiba_mais_container .title_saiba_mais{
+
+.saiba_mais_container .title_saiba_mais {
   color: #03258C;
   font-weight: bolder;
- 
+
 }
-.saiba_mais_container p{
+
+.saiba_mais_container p {
   color: rgba(0, 0, 0, 0.616);
   margin-top: 2vh;
   margin-bottom: 4vh;
 }
 
 // seção serviço
-.secao_servico{
+.secao_servico {
 
   margin-top: 10vh;
 }
-.secao_servico .imagem_lateral{
+
+.secao_servico .imagem_lateral {
   display: flex;
   justify-content: center;
 }
-.secao_servico .imagem_lateral img{
+
+.secao_servico .imagem_lateral img {
   object-fit: cover;
   width: 80%;
   height: 55vh;
   border-radius: 2vh;
   box-shadow:
-  rgba(60,64,67,0.3) 0px 1px 2px 0px,
-  rgba(60,64,67,0.15) 0px 2px 6px 2px;
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
+
 // Css texto serviço
-.texto_lateral{
+.texto_lateral {
   padding: 2vh 0 0 5vh;
 }
-.secao_servico .texto_lateral .text h2{
+
+.secao_servico .texto_lateral .text h2 {
   margin-top: 1vh;
   margin-bottom: 2vh;
-color: #03258C;
-font-weight: bold;
+  color: #03258C;
+  font-weight: bold;
 }
-.secao_servico .texto_lateral .text li{
+
+.secao_servico .texto_lateral .text li {
   color: rgba(0, 0, 0, 0.616);
   list-style: none;
   padding: 1vh 0 0 3vh;
 
 }
-.secao_servico .texto_lateral .text li svg{
+
+.secao_servico .texto_lateral .text li svg {
   color: green;
   width: 5vh;
 }
-.secao_servico .texto_lateral .botao_servico{
+
+.secao_servico .texto_lateral .botao_servico {
   margin-top: 4vh;
 }
 
 // secao outros servicos
-.tipo_servico{
+.tipo_servico {
   margin-bottom: 5vh;
 }
-.card_servico{
+
+.card_servico {
   display: flex;
   justify-content: center;
   margin-top: 15vh;
 }
+
 // CSS de cada do card em si
-.card_servico .servico{
+.card_servico .servico {
   display: flex;
   justify-content: center;
+  border-radius: 2vh;
   min-width: 50vh;
   max-width: 50vh;
-  min-height: 50vh;
-  max-height: 50vh;
+  min-height: 90%;
+  max-height: 90%;
 }
+
 // fundo individual do card
-.card_servico #residencial{
-  background: url(../../assets/icon/equipe.png) center center no-repeat;
+.card_servico #residencial {
+  width: 100%;
+  background: url(https://img.freepik.com/fotos-gratis/um-eletricista-trabalha-em-uma-mesa-telefonica-com-um-cabo-eletrico-de-conexao_169016-15086.jpg?size=626&ext=jpg) center center no-repeat;
   object-fit: cover;
 }
+
+.card_servico #predial {
+  background: url(https://img.freepik.com/fotos-gratis/equipe-um-tecnico-eletrico-trabalhando-em-um-quadro-de-distribuicao-com-fusiveis_169016-24062.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698105600&semt=ais) center center no-repeat;
+  object-fit: cover;
+}
+
+.card_servico #industrial {
+  background: url(https://www.visualmidiablumenau.com.br/uploads/cursos/eletricista-industrial-comandos-eletricos.png) center center no-repeat;
+  object-fit: cover;
+}
+
 // Css do container com o link
-.card_servico .container_link{
+.card_servico .container_link {
   margin: auto;
   text-align: center;
   align-items: center;
@@ -165,18 +197,25 @@ font-weight: bold;
   height: 15vh;
   background-color: #020F59;
 }
-.card_servico .container_link h2{
+
+.card_servico .container_link h2 {
   margin-top: 5vh;
 }
-.card_servico .container_link:hover{
+
+.card_servico .container_link:hover {
   margin-top: 60%;
   width: 90%;
   height: 30vh;
+  transition: 500ms linear; 
 }
-.card_servico .container_link h5{
-  margin-top: 4vh;
+.card_servico .container_link h5 {
+  margin-top: 6vh;
 }
-.card_servico .container_link h5:hover{
+.card_servico .container_link h5 svg{
+  width: 3vh;
+}
+
+.card_servico .container_link h5:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -186,61 +225,94 @@ font-weight: bold;
 
 // footer
 
-.footer{
+.footer {
   margin-top: 15vh;
+  padding: 7vh 3vh 3vh 3vh;
+  background: rgb(3, 37, 140);
+  background: radial-gradient(circle, rgba(3, 37, 140, 1) 11%, rgba(3, 43, 150, 1) 45%, rgba(2, 15, 89, 1) 93%);
+}
 
-
-  padding: 3vh;
-  background: rgb(3,37,140);
-  background: radial-gradient(circle, rgba(3,37,140,1) 11%, rgba(3,43,150,1) 45%, rgba(2,15,89,1) 93%);
-  }
 // seção empresa
-.footer .empresa{
+.footer .empresa {
   display: flex;
   justify-content: center;
-  margin: auto;
   padding: 4vh;
 }
-.footer .empresa .rodape_logo{
+
+.footer .empresa .rodape_logo {
   width: 15vh;
   height: 8vh;
-  border-bottom:2px solid#73020C;
+  border-bottom: 2px solid#73020C;
 }
-.footer .empresa .text_rodape{
+
+.footer .empresa .text_rodape {
   margin-top: 3vh;
 }
+
 // seção mapa do site
-.footer .mapa_site{
+.footer .mapa_site {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin-top: 3vh;
+
 }
-.footer .mapa_site h4{
+
+.footer .mapa_site h3 {
   text-decoration: underline;
   font-weight: bold;
 }
-.footer .mapa_site ul{
-  list-style: none;
-  text-decoration: underline;
 
+.footer .mapa_site ul {
+  margin-top: 1.5vh;
+  list-style: none;
+  font-size: larger;
 }
-.footer .redes_sociais{
+.footer .mapa_site li:hover{
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+// Link para redes sociais
+.footer .redes_sociais h3{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.footer .redes_sociais {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin-top: 3vh;
+
 }
-.footer .redes_sociais .social a{
+.footer .redes_sociais .social{
+  margin-top: 1.5vh;
+  font-size: larger;
+}
+.footer .redes_sociais .social a {
   color: white;
+  margin-top: 2vh;
+}
+.footer .redes_sociais .social a:hover{
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+.footer .redes_sociais .social svg{
+  width: 3vh;
 }
 
 // sac
-.footer .sac{
+.footer .sac {
   display: flex;
   justify-content: center;
-  margin: auto;
-  
+  margin-top: 3vh;
+
+
 }
-.footer .sac h3{
+
+.footer .sac h3 {
   font-weight: bold;
   text-decoration: underline;
+}
+.footer .sac p{
+  font-size: large;
 }
