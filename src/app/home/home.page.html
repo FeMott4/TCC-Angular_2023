@@ -100,6 +100,38 @@
         </ion-col>
       </ion-row>
 
+      <!-- outros serviços -->
+      <ion-row class="tipo_servico">
+        <ion-col class="card_servico" size="12" sizeLg="4" sizeMd="12" sizeSm="12">
+          <div class="servico" id="residencial">
+            <div class="container_link">
+                <h2 >Residencial</h2>
+              <h5 routerLink="/servico">saiba mais</h5>
+  
+              
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="card_servico" size="12" sizeLg="4" sizeMd="12" sizeSm="12">
+          <div class="servico">
+            <img src="" alt="">
+            <div class="container_link">
+              <h2>Predial</h2>
+              <h5 routerLink="/servico">saiba mais</h5>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="card_servico" size="12" sizeLg="4" sizeMd="12" sizeSm="12">
+          <div class="servico">
+            <img src="" alt="">
+            <div class="container_link">
+              <h2>Industrial</h2>
+              <h5 routerLink="/servico">saiba mais</h5>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
 
 
 
@@ -232,35 +264,53 @@
 
 
 
-      <ion-footer>
-        <ion-row>
-          <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
-            <h4>E-MAIL:</h4>
-            <h5>malvzuco@yahoo.com.br</h5> <br>
-
-            <h4>TELEFONE:</h4>
-            <h5>+15 99762-6275</h5>
-          </ion-col>
-
-          <ion-col class="info-footer" size-lg="3" size-md="6" size-sm="12">
-            <h4>MAPA DO SITE</h4>
-            <div>
-              <ion-button class="botao" shape="round" expand="full" routerLink="/home">Página Incial</ion-button>
-              <ion-button class="botao" shape="round" expand="full" routerLink="/clientes">Cliente</ion-button>
-              <ion-button class="botao" shape="round" expand="full" routerLink="/contato">Contato</ion-button>
-              <ion-button class="botao" shape="round" expand="full" routerLink="/servico">Serviços</ion-button>
+      <ion-row class="footer">
+        <ion-col class="empresa" size="12" sizeLg="3" sizeMd="6" sizeSm="12">
+          <div>
+            <div class="rodape_logo">
+              <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="Logo da Malvzuco">
             </div>
-          </ion-col>
-
-          <ion-col class="imagem" size-lg="6" size-md="10" size-sm="12">
-            <div class="logo_footer">
-              <img src="../../assets/icon/logo-malvzuco-navbar.png" alt="imagem da logo">
+            <div class="text_rodape">
+              <p>Entaoo cdcdcsf cdd  dsc dcsdcscd d cdcsdcdsdcs scc
+                dsdcsdcdsds dcsdcdc dcsdcdcdsc csdcdscsdcsd dcsdcscd
+                dcsdcdscd sdcsdcsdcs  dscsdc dcdscdss cdscsdcc cscsdc.
+              </p>
             </div>
-          </ion-col>
-
-
-        </ion-row>
-      </ion-footer>
+          </div>
+        </ion-col>
+        <ion-col class="mapa_site" size="12" sizeLg="3" sizeMd="6" sizeSm="12">
+          <div>
+            <h4>Mapa do site</h4>
+          <ul>
+            <li routerLink="/home">Página Inicial</li>
+            <li routerLink="/clientes">Agendar</li>
+            <li routerLink="/servico">Serviços</li>
+            <li routerLink="/contato">Contatos</li>
+          </ul>
+          </div>
+          
+        </ion-col>
+        <ion-col class="redes_sociais" size="12" sizeLg="3" sizeMd="6" sizeSm="12">
+          <div>
+            <div class="social">
+              <a href="">Instagram</a>
+            </div>
+            <div class="social">
+              <a href="">Facebook</a>
+            </div>
+            <div class="social">
+              <a href="">E-mail</a>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="sac" size="12" sizeLg="3" sizeMd="6" sizeSm="12">
+          <div>
+            <h3>SAC</h3>
+          <p>malvzuco12@gmail.com</p>
+          <p>(15) 99234-1254</p>
+          </div>
+        </ion-col>
+      </ion-row>
 
 
     </ion-content>
