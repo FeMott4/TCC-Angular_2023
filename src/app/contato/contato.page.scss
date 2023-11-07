@@ -83,72 +83,52 @@ ion-menu {
   justify-content: space-around;
 }
 .secao_contato .card_contato .contato{
+  background-color: rgb(233, 233, 233);
+  padding: 4vh;
+  margin-top: 3vh;
   border: 0.5px solid rgba(0, 0, 0, 0.616);
   border-radius: 1vh;
   box-shadow:
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  width: 40vh;
+  width: 90%;
   height: 25vh;
+  color: black;
+}
+
+
+.secao_contato .card_contato .contato svg {
+
+  width: 6vh;
+  
+}
+.secao_contato .card_contato .contato h2{
+  color: #03258C;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+// Seção mapa
+.secao_mapa{
+  margin-top: 7vh;
+  display: flex;
+  justify-content: center;
+  background-color: #03258ce8;
+
+}
+.container_mapa{
+  display: flex;
+  justify-content: center;
+  padding: 4vh 3vh 4vh 3vh ;
+}
+.mapa{
+  width: 100%;
+  border-radius: 2vh;
 }
 
 
 
-
   
-  // Page
-  .container{
-    display: flex;
-    justify-content: space-around;
-  }
-  .conteudo{
-
-    text-align: center;
-    margin-top: 4vh;
-  
-  }
-
-  
-  // mapa 
-  .conteudo_map{
-    display: flex;
-    justify-content: center;
-  }
-  .map_container{
-    
-    background-color: #03258C;
-    border-radius: 2vh ;
-    padding: 1vh 1vh 1vh 1vh;
-    max-width: 50vh;
-    min-width: 50vh;
-    max-height: 55vh;
-
-  }
-  .map svg{
-    color:white;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-  }
-  .mapa{
-    margin-top: 1vh;
-    border-radius: 2vh; 
-    max-width: 100%;
-    max-height: 90%;
-  }
-  
-  // Contato whats
-  .conteudo_whats{
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .conteudo_whats svg{
-    color: black;
-  }
-  .link_whats a p{
-    color: white;
-    text-decoration: none;
-  }
   
 // footer
 
