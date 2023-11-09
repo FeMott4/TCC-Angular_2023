@@ -54,18 +54,44 @@ ion-menu {
   cursor: pointer;
 }
 
-// CSS Slide principal
+// CSS seção principal
 .secao_principal{
-  background:
-  linear-gradient(
-      rgba(0,0,0,.3),rgba(0,0,0,.3)
-    ),
-   url(https://img.freepik.com/fotos-gratis/um-tecnico-em-eletricidade-trabalhando-em-uma-central-com-fusiveis_169016-5509.jpg?w=1380&t=st=1699279950~exp=1699280550~hmac=bf1ac45f30e46285f4692aeea783dceb4baa171adca153111d21cfee12bf6069);
-  background-size: cover;
+  margin-top: 5vh;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+}
+.tipo_servico{
+  margin-top: 5vh;
+  border: 1px solid red;
+
+
+}
+// css imagem
+.tipo_servico .imagem{
+  display: flex;
+  justify-content: center;
+}
+.tipo_servico .imagem img{
+  width: 40vh;
+  height: 40vh;
   object-fit: cover;
-  max-width: 100%;
-  min-width: 100%;
-  height: 70%;
+  border-radius: 100%;
+
+}
+// css texto
+.tipo_servico .text{
+  padding: 4vh 3vh 3vh 3vh;
+}
+.tipo_servico .text h2{
+  margin-bottom: 1vh;
+  text-align: center;
+  color: #03258C;
+  font-size: x-large;
+  font-weight: bold;
+}
+.tipo_servico .text p{
+  color: rgba(0, 0, 0, 0.822);
 }
 
 

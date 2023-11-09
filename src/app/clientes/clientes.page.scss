@@ -1,195 +1,189 @@
 * {
-//  border: 1px solid red;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+  // border: 1px solid red;
+
 }
 
-// Cor de fundo 
+// cor de fundo
 .cor_fundo {
   --ion-background-color: white;
-  // --ion-background-color:rgb(34,132,230);;
-  // --ion-background-color:radial-gradient(circle, rgba(34,132,230,1) 0%, rgba(27,103,179,1) 22%, rgba(19,73,128,1) 60%, rgba(11,44,77,1) 100%);
 }
 
-// Menu fundo parte de dentro
-.fundo_menu {
-  --ion-toolbar-background: #0B2C4D;
-  --ion-item-background: #040F1A;
+// css menu
+ion-menu {
+  position: fixed;
 }
 
-ion-button {
-  --background: #0B2C4D;
-}
-// menu
 // Menu 
-.menu_color{
+.menu_color {
   background-color: #03258C;
-  padding: 1vh 1vh 1vh 1vh;
+  padding: 1vh 2vh 1vh 2vh;
 }
-.logo_menu{
+
+.logo_menu {
   display: flex;
   justify-content: start;
+  margin: auto;
 }
-.link_menu{
+
+.logo_menu img {
+  width: 50%;
+}
+
+.link_menu {
   display: flex;
-  justify-content: end;
-  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+
+
 }
-.link_menu a{
+
+.link_menu a {
   color: white;
   font-size: large;
 }
-.link_menu a:hover{
-  color:#cbdcfe;
+
+.link_menu a:hover {
+  color: #cbdcfe;
   border-bottom: 1px solid #73020C;
-  font-size:larger;
+  font-size: larger;
   cursor: pointer;
 }
-
-
-.menu_botao {
-  background: rgb(4, 15, 26);
-  background: linear-gradient(190deg, rgba(4, 15, 26, 1) 0%, rgba(11, 44, 77, 1) 35%, rgba(19, 73, 128, 1) 100%);
-}
-
-.titulo1 {
-  margin-top: 1vh;
-  margin-bottom: 3vh;
-  color: white;
-  text-align: center;
-}
-
-// menu superior
-.botao {
-  width: 100%;
-  margin-bottom: 2vh;
-  color: white;
-}
-
-.logo {
-  height: 5vh;
-}
-
 // css page
-.conteudo{
-  color: white;
-  display: flex;
-  justify-content: center;
+// seção apresentação
+.secao_apresentacao{
   margin-top: 5vh;
-  margin-bottom: 17vh;
- 
 }
-.banner{
+// seção form
+.secao_form{
+  margin-top: 5vh;
+  background-color: #03258cea;
+}
+// formulario
+.secao_form .formulario{
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
-  color: black;
-  text-align: center;
-  max-width: 60vh;
-  
-}
-
-
-// css form
-.centro_form{
-  display: flex;
-  justify-content: center;
-}
-.content_form {
-  
-  background-color: #0B2C4D;
-  border: 0.7vh solid #040F1A;
-  border-radius: 3vh;
   padding: 3vh;
-
-
 }
-// CSS calendario
-.conteudo_calendario{
-  display: flex;
-  justify-content: center;
-}
-.calendario{
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  border: 1px solid #040F1A;
+.secao_form .formulario .content_form{
+  background-color: #03258C;
+  padding: 2vh 4vh 2vh 4vh;
   border-radius: 2vh;
-  color: black;
-  background-color: white;
 }
-
-// Escolha do funcionario e horario
-.selecao{
-  display: flex;
-  justify-content: center;
+.secao_form .formulario .content_form h1{
+  text-align: center;
 }
-.selecao ion-list{
- 
+.secao_form .formulario .content_form .calendario{
   background-color: white;
   color: black;
 }
-.fundo_item .bota_horario{
-  display: flex;
-
-}
-ion-accordion-group{
-
-  max-width: 90%;
-  min-width: 90%;
-}
-.funcionario_aba{
-  text-align: center;
-  max-width: 90%;
-  min-width: 90%;
-  
-}
-// CSS checkbox
-.selecao ion-item{
-  --background:white;
-  color: black;
-  padding: 0.5vh;
-}
-.selecao ion-checkbox:hover{
-  color:blue;
-}
-.escolha_funcionario {
-  background-color: white;
-  color: black;
-}
-.funcionario{
-  color: black;
-}
-// horario
-
-ion-list h5{
-  text-align: center;
+.secao_form .formulario .content_form .selecao{
+  color: black ; 
 }
 
-form h1{
-  text-align: center;
-  font-family: poupins;
-  border-bottom: 1px solid #040F1A;
-}
 
 // footer
-ion-footer{
-  margin-top:10vh;
-  padding: 5vh;
-  color: white;
-  background: rgb(3,37,140);
-  background: radial-gradient(circle, rgba(3,37,140,1) 11%, rgba(3,43,150,1) 45%, rgba(2,15,89,1) 93%);
-  }
-.info-footer{
-  text-align: center;
-  font-family: arial;
+
+.footer {
+  margin-top: 15vh;
+  padding: 7vh 3vh 3vh 3vh;
+  background: rgb(3, 37, 140);
+  background: radial-gradient(circle, rgba(3, 37, 140, 1) 11%, rgba(3, 43, 150, 1) 45%, rgba(2, 15, 89, 1) 93%);
 }
-// botao mapa do site
-.info-footer .botao{
-  --background:#020F59;
-}
-.imagem img{
-  width: 50vh;
-  min-width: 30vh;
-}
-.logo_footer{
+
+// seção empresa
+.footer .empresa {
   display: flex;
   justify-content: center;
+  padding: 4vh;
+}
+
+.footer .empresa .rodape_logo {
+  width: 15vh;
+  height: 8vh;
+  border-bottom: 2px solid#73020C;
+}
+
+.footer .empresa .text_rodape {
+  margin-top: 3vh;
+}
+
+// seção mapa do site
+.footer .mapa_site {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+
+}
+
+.footer .mapa_site h3 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer .mapa_site ul {
+  margin-top: 1.5vh;
+  list-style: none;
+  font-size: larger;
+}
+
+.footer .mapa_site li:hover {
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+
+// Link para redes sociais
+.footer .redes_sociais h3 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer .redes_sociais {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+
+}
+
+.footer .redes_sociais .social {
+  margin-top: 1.5vh;
+  font-size: larger;
+}
+
+.footer .redes_sociais .social a {
+  color: white;
+  margin-top: 2vh;
+}
+
+.footer .redes_sociais .social a:hover {
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+
+.footer .redes_sociais .social svg {
+  width: 3vh;
+}
+
+// sac
+.footer .sac {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+
+
+}
+
+.footer .sac h3 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer .sac p {
+  font-size: large;
 }
