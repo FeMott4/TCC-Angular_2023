@@ -57,17 +57,82 @@ ion-menu {
 // seção apresentação
 .secao_apresentacao{
   margin-top: 5vh;
+  color: black;
+}
+// cards com diferenciais
+.secao_apresentacao .cards{
+  display: flex;
+  justify-content: center;
+  padding: 3vh;
+}
+.secao_apresentacao .cards .conteudo_card{
+  margin-bottom: 3vh;
+  display: flex;
+}
+.secao_apresentacao .cards .conteudo_card .imagem {
+  width: 12vh;
+  height: 12vh;
+  background: #03258c9d;
+  padding: 2vh;
+  border-radius: 100%;
+
+}
+.secao_apresentacao .cards .conteudo_card .imagem img{
+  object-fit: cover;
+  
+}
+.secao_apresentacao .cards .conteudo_card .conteudo_texto{
+  width: 70%;
+  padding: 1vh 1vh 1vh 2vh;
+  margin: auto;
+}
+.secao_apresentacao .cards .conteudo_card .conteudo_texto h2{
+  color: #03258C;
+  font-size: x-large;
+  font-weight: bold;
+}
+.secao_apresentacao .cards .conteudo_card .conteudo_texto p{
+  padding: 0.5vh ;
+}
+
+
+
+// texto lateral
+.secao_apresentacao .text_apresentacao {
+  color: black;
+  margin: auto;
+  padding: 3vh;
+}
+.secao_apresentacao .text_apresentacao h1{
+  padding: 1vh;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #03258C;
+  border-bottom: 2px solid #03258C;
+}
+.secao_apresentacao .text_apresentacao p{
+  padding: 2vh 3vh 2vh 3vh;
 }
 // seção form
 .secao_form{
-  margin-top: 5vh;
+  margin-top: 7vh;
   background-color: #03258cea;
+  padding: 3vh;
+}
+.secao_form .text{
+  text-align: center;
+  margin: auto;
+  padding-bottom: 10vh;
+}
+.secao_form .text h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 // formulario
 .secao_form .formulario{
   display: flex;
   justify-content: center;
-  padding: 3vh;
+  
 }
 .secao_form .formulario .content_form{
   background-color: #03258C;
@@ -81,10 +146,27 @@ ion-menu {
   background-color: white;
   color: black;
 }
-.secao_form .formulario .content_form .selecao{
+.secao_form .formulario .content_form .selecao h5{
+  text-align: center;
+  background-color: white;
+  padding: 2vh;
+  font-size:large;
+  font-weight: bold;
+
+  color:#03258C ; 
+}
+.secao_form .formulario .content_form .selecao ion-label{
+  color: black ; 
+}
+.secao_form .formulario .content_form .selecao .check{
+  --background: white;
   color: black ; 
 }
 
+// botao agendar
+.botao_agendar{
+  margin-top: 3vh;
+}
 
 // footer
 
