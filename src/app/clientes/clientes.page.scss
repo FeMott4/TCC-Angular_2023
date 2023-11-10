@@ -113,6 +113,8 @@ ion-menu {
 .secao_apresentacao .text_apresentacao p{
   padding: 2vh 3vh 2vh 3vh;
 }
+
+
 // seção form
 .secao_form{
   margin-top: 7vh;
@@ -135,12 +137,17 @@ ion-menu {
   
 }
 .secao_form .formulario .content_form{
-  background-color: #03258C;
+  background-color: rgb(247, 247, 247);
   padding: 2vh 4vh 2vh 4vh;
   border-radius: 2vh;
+  color: black;
 }
 .secao_form .formulario .content_form h1{
   text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  color: #03258C;
+  border-bottom: 1px solid gray;
 }
 .secao_form .formulario .content_form .calendario{
   background-color: white;
@@ -161,6 +168,15 @@ ion-menu {
 .secao_form .formulario .content_form .selecao .check{
   --background: white;
   color: black ; 
+}
+.secao_form .formulario .content_form .selecao ion-item{
+  --background: white;
+  color:#03258C 
+}
+.secao_form .formulario .content_form .selecao .check ion-checkbox:hover{
+  --background: white;
+  color:#03258C ;
+  font-weight: bold; 
 }
 
 // botao agendar

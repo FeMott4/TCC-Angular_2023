@@ -67,9 +67,7 @@ ion-menu {
   min-width: 100%;
 
 }
-.secao-apresentacao:after{
-  margin-left: 20vh;
-}
+
 .container {
   margin-top: auto;
   margin-bottom: auto;
@@ -198,6 +196,7 @@ ion-menu {
   width: 80%;
   height: 15vh;
   background-color: #020F59;
+  transition: 500ms linear;
 }
 
 .card_servico .container_link h2 {
@@ -208,7 +207,7 @@ ion-menu {
   margin-top: 60%;
   width: 90%;
   height: 30vh;
-  transition: 500ms linear; 
+   
 }
 .card_servico .container_link h5 {
   margin-top: 6vh;
