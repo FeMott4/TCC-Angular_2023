@@ -1,16 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Cadastro</ion-title>
-  </ion-toolbar>
+<!-- link bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<ion-header>
+
+  <ion-row class="menu_color">
+    <ion-col class="logo_menu" sizeLg="2" sizeMd="2" sizeSm="2">
+      <a href="/home">
+        <img class="logo" src="../../assets/icon/logo-malvzuco-navbar.png" alt="img">
+      </a>
+    </ion-col>
+    <ion-col class="link_menu"sizeLg="10" sizeMd="10" sizeSm="10">
+      <ul class="nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        
+      </ul>
+    </ion-col>
+  </ion-row>
+
 </ion-header>
 
 <ion-content [fullscreen]="true" class="fundo">
-  <ion-row class="cadastro_funcionario">
-    <ion-col size="11" size-lg="4">
+  <ion-row class="cadastros">
+    <!-- seção cadastro -->
+    <ion-col class="conteudo cadastro_funcionario" size="12" sizeLg="6" sizeMd="10" sizeSm="12">
+      <!-- cadastro de funcionario -->
       <form class="content_form">
-
         <ion-label>
-          <h1>Cadastre-se</h1>
+          <h1>Cadastrar Funcionário</h1>
         </ion-label>
 
         <ion-input label="Nome:" [(ngModel)]="this.funcionario.nome" [ngModelOptions]="{standalone: true}"
@@ -19,14 +40,9 @@
         <ion-input label="Função:" [(ngModel)]="this.funcionario.funcao" [ngModelOptions]="{standalone: true}"
           type="text"></ion-input>
 
-
-      </form>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="cadastro_funcionario">
-    <ion-col size="11" size-lg="4">
-      <form class="content_form">
+     
+      <!-- cadastro de horario -->
+      
 
         <ion-label>
           <h1>Cadastrar horarios</h1>
@@ -43,24 +59,25 @@
         <ion-button color="secondary" shape="round" expand="full" (click)="inserirFuncionario()">Finalizar
           cadastro</ion-button>
 
+          <div class="lista_horarios">
+            <ng-container *ngFor="let horario of this.funcionario.horarios">
+              {{horario.hora}}
+              <ion-toggle [checked]="horario.bloqueado"></ion-toggle>
+            </ng-container>
+          </div>
+
       </form>
-    </ion-col>
-  </ion-row>
 
-  <ion-row class="cadastro_funcionario">
-    <ion-col size="11" size-lg="4">
-      <ng-container *ngFor="let horario of this.funcionario.horarios">
-        {{horario.hora}}
-        <ion-toggle [checked]="horario.bloqueado"></ion-toggle>
-      </ng-container>
+      <!-- horarios digitados -->
       
-    </ion-col>
-  </ion-row>
 
-  <ion-row class="listar">
-    <ion-col class="secao_listar" size="11" size-lg="4">
-      <ion-button shape="round" expand="full" (click)="listar()">Listar</ion-button>
-      <ion-list class="lista_funcionario">
+    </ion-col>
+  
+    <!-- seção listar -->
+    <ion-col class="conteudo secao_listar" size="12" sizeLg="6" sizeMd="10" sizeSm="12">
+      <div class="lista">
+        <!-- <ion-button shape="round" expand="full" (click)="listar()">Listar</ion-button> -->
+      
         <ion-item *ngFor="let funcionario of this.funcionarios" (click)="definirHora(funcionario)">
           <ion-label>
             {{funcionario.id}}
@@ -72,9 +89,25 @@
             {{funcionario.funcao}}
           </ion-label>
         </ion-item>
-      </ion-list>
+      
+      </div>
     </ion-col>
   </ion-row>
+
+  <!-- <ion-row>
+    <ion-col>
+      <ng-container *ngFor="let funcionarios of this.funcionario">
+        <form (ngSubmit)="removerFuncionario(funcionario)">
+          <ion-item>
+            <ion-label>Nome do Aluno: {{ funcionarios['nome'] }}</ion-label>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-button color="light" slot="end" type="submit">Remover Aluno</ion-button>
+          </ion-item>
+        </form>
+      </ng-container>
+    </ion-col>
+  </ion-row> -->
 
   <!-- <ion-row class="listar_Horarios">
     <ion-col class="secao_horario" size="11" size-lg="4">

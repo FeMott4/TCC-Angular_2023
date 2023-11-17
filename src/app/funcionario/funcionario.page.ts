@@ -38,7 +38,7 @@ export class FuncionarioPage implements OnInit {
    }
 
   ngOnInit() {
-    // this.recuperarFuncionarios()
+     this.recuperarFuncionarios()
   }
   // Inserir Funcionario
   inserirFuncionario(){
@@ -81,6 +81,12 @@ export class FuncionarioPage implements OnInit {
   listarhorario(){
     this.recuperarhorario()
   }
+
+  // remover funcionario
+  // removerFuncionario(funcionario: any){
+  //   console.log(funcionario);
+  //   this._crudService.remove(funcionario.nome, 'funcionario')
+  // }
 
 
 }

@@ -1,61 +1,89 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
-}
+} 
 .fundo{
     --background: white;
 }
 // CSS menu title
-ion-header {
-    --ion-toolbar-background: #0B2C4D;
-    
-}
-ion-header ion-title{
-    text-align: center;
+
+ion-menu {
+    position: fixed;
+  }
+  
+  // Menu 
+  .menu_color {
+    background-color: #03258C;
+    padding: 1vh 2vh 1vh 2vh;
+  }
+  
+  .logo_menu {
+    display: flex;
+    justify-content: start;
+    margin: auto;
+  }
+  
+  .logo_menu img {
+    width: 50%;
+  }
+  
+  .link_menu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  
+  
+  }
+  
+  .link_menu a {
     color: white;
-    font-size: xx-large;
-}
+    font-size: large;
+  }
+  
+  .link_menu a:hover {
+    color: #cbdcfe;
+    border-bottom: 1px solid #73020C;
+    font-size: larger;
+    cursor: pointer;
+  }
 
-// Css cadastro funcionario
-.cadastro_funcionario{
+//   Seção principal
+.cadastros .conteudo{
+    background-color: #03258cea;
     display: flex;
     justify-content: center;
-}
-.content_form{
+    margin-top: 5vh;
+    padding: 4vh 2vh 4vh 2vh;
     color: black;
-    margin-top: 3vh;
-    border: 2px solid #0B2C4D;
-    border-radius: 3vh;
-    padding: 2vh;
 }
-.content_form  h1{
-    font-size: xx-large;
+// css containers
+.cadastros .cadastro_funcionario .content_form{
+    background-color: white;
+    width: 50vh;
+    padding: 3vh 2vh 3vh 2vh ;
+    color: black;
+    border-radius: 2vh;
+
+}
+.cadastros .cadastro_funcionario .content_form h1{
     text-align: center;
-    border-bottom: 1px solid #040F1A;
+    color: #0B2C4D;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+.cadastros .cadastro_funcionario .content_form ion-input{
+    margin-bottom: 1vh;
 }
 
-// Seção listar funcionario
-.listar{
-    display: flex;
-    justify-content: center;
+.cadastros .cadastro_funcionario .content_form .lista_horarios{
+    margin-top: 2vh;
 }
-.listar ion-item{
-    --background-color: white;
-}
-.secao_listar{
-    margin-top: 3vh;
+// seção listar
+
+.secao_listar ion-item {
+    --background: white;
+    color: black;
+    text-align: center; 
     
 }
-.lista_funcionario{
-    border: 2px solid #040F1A;
-    border-radius: 3vh;
-}
-.lista_funcionario ion-label{
-    font-size: medium;
-    text-align: center;
-}
 
-// Seção lista horarios
-.listar_Horarios{
-    display: flex;
-    justify-content: center;
-}
