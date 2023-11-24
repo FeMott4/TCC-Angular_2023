@@ -62,12 +62,12 @@ ion-menu {
   margin-bottom: 5vh;
 }
 
-.secao_contato .text_apresentacao h1{
+ .text_apresentacao h1{
   color: #03258C;
   font-size:xx-large;
   font-weight: bold;
 }
-.secao_contato .text_apresentacao p{
+.text_apresentacao p{
   margin-top: 1vh;
   font-size: large;
   color: rgba(0, 0, 0, 0.616);
@@ -79,11 +79,11 @@ ion-menu {
   justify-content: center;
 
 }
-.secao_contato .card_contato{
+.card_contato{
   display: flex;
   justify-content: space-around;
 }
-.secao_contato .card_contato .contato{
+.contato{
   background-color: rgb(233, 233, 233);
   padding: 4vh;
   margin-top: 3vh;
@@ -98,15 +98,18 @@ ion-menu {
 }
 
 
-.secao_contato .card_contato .contato svg {
-
+ .contato svg {
+  color: black;
   width: 6vh;
   
 }
-.secao_contato .card_contato .contato h2{
+ .contato h2{
   color: #03258C;
   font-size: x-large;
   font-weight: bold;
+}
+.contato p{
+  color: black;
 }
 
 // Seção mapa
@@ -137,87 +140,87 @@ ion-menu {
 .footer {
   margin-top: 15vh;
   padding: 7vh 3vh 3vh 3vh;
+  color: white;
   background: rgb(3, 37, 140);
   background: radial-gradient(circle, rgba(3, 37, 140, 1) 11%, rgba(3, 43, 150, 1) 45%, rgba(2, 15, 89, 1) 93%);
 }
 
 // seção empresa
-.footer .empresa {
+.empresa {
   display: flex;
   justify-content: center;
   padding: 4vh;
 }
-
-.footer .empresa .rodape_logo {
+.rodape_logo {
   width: 15vh;
   height: 8vh;
   border-bottom: 2px solid#73020C;
 }
 
-.footer .empresa .text_rodape {
+.text_rodape {
   margin-top: 3vh;
+  
 }
 
 // seção mapa do site
-.footer .mapa_site {
+.mapa_site {
   display: flex;
   justify-content: center;
   margin-top: 3vh;
 
 }
 
-.footer .mapa_site h3 {
+.mapa_site h3 {
   text-decoration: underline;
   font-weight: bold;
 }
 
-.footer .mapa_site ul {
+.mapa_site ul {
   margin-top: 1.5vh;
   list-style: none;
   font-size: larger;
 }
-
-.footer .mapa_site li:hover {
+.mapa_site li:hover {
   font-size: x-large;
   cursor: pointer;
   margin-left: 1vh;
 }
 
 // Link para redes sociais
-.footer .redes_sociais h3 {
+.redes_sociais h3 {
   font-weight: bold;
   text-decoration: underline;
 }
 
-.footer .redes_sociais {
+.redes_sociais {
   display: flex;
   justify-content: center;
   margin-top: 3vh;
 
 }
 
-.footer .redes_sociais .social {
+.social {
   margin-top: 1.5vh;
   font-size: larger;
 }
 
-.footer .redes_sociais .social a {
+.social a {
   color: white;
   margin-top: 2vh;
 }
 
-.footer .redes_sociais .social a:hover {
+.social a:hover {
   font-size: x-large;
   cursor: pointer;
   margin-left: 1vh;
 }
 
-.footer .redes_sociais .social svg {
+.social svg {
   width: 3vh;
 }
 
 // sac
-.footer .sac {
+.sac {
   display: flex;
   justify-content: center;
   margin-top: 3vh;
@@ -225,12 +228,12 @@ ion-menu {
 
 }
 
-.footer .sac h3 {
+.sac h3 {
   font-weight: bold;
   text-decoration: underline;
 }
 
-.footer .sac p {
+.sac p {
   font-size: large;
 }
   

@@ -188,6 +188,7 @@ ion-menu {
 
 // Css do container com o link
 .card_servico .container_link {
+  color: white;
   margin: auto;
   text-align: center;
   align-items: center;
@@ -210,6 +211,7 @@ ion-menu {
    
 }
 .card_servico .container_link h5 {
+  
   margin-top: 6vh;
 }
 .card_servico .container_link h5 svg{
@@ -230,6 +232,7 @@ ion-menu {
   margin-top: 15vh;
   padding: 7vh 3vh 3vh 3vh;
   background: rgb(3, 37, 140);
+  color: white;
   background: radial-gradient(circle, rgba(3, 37, 140, 1) 11%, rgba(3, 43, 150, 1) 45%, rgba(2, 15, 89, 1) 93%);
 }
 
@@ -240,7 +243,7 @@ ion-menu {
   padding: 4vh;
 }
 
-.footer .empresa .rodape_logo {
+.rodape_logo {
   width: 15vh;
   height: 8vh;
   border-bottom: 2px solid#73020C;
