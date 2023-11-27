@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'funcionario',
     loadChildren: () => import('./funcionario/funcionario.module').then( m => m.FuncionarioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 
 ];

@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  
+    // border: 1px solid red;
+  
+  }
+  
+  // cor de fundo
+  .cor_fundo {
+    --ion-background-color: white;
+  }
+  
+  // css menu
+  ion-menu {
+    position: fixed;
+  }
+  
+  // Menu 
+  .menu_color {
+    background-color: #03258C;
+    padding: 1vh 2vh 1vh 2vh;
+  }
+  
+  .logo_menu {
+    display: flex;
+    justify-content: start;
+    margin: auto;
+  }
+  .logo_menu img{
+    width: 50%;
+  }
+  
+  .link_menu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  
+  .link_menu a {
+    color: white;
+    font-size: large;
+  }
+  
+  .link_menu a:hover {
+    color: #cbdcfe;
+    border-bottom: 1px solid #73020C;
+    font-size: larger;
+    cursor: pointer;
+  }
+
+//   SEÇÃO LOGIN
+.center_form{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.center_form h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.form_login{
+    padding: 3vh 2vh 3vh 2vh;
+}

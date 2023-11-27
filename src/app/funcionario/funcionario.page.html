@@ -4,7 +4,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 crossorigin="anonymous"></script>
-<ion-header>
+<ion-header> 
 
   <ion-row class="menu_color">
     <ion-col class="logo_menu" sizeLg="2" sizeMd="2" sizeSm="2">
@@ -51,8 +51,8 @@ crossorigin="anonymous"></script>
         <ion-input label="Hora:" [(ngModel)]="this.horario.hora" [ngModelOptions]="{standalone: true}"
           type="text"></ion-input>
 
-        <ion-toggle [checked]="false" [(ngModel)]="this.horario.bloqueado" [ngModelOptions]="{standalone: true}">Checked
-          Toggle</ion-toggle><br /><br />
+        <ion-toggle [checked]="false" [(ngModel)]="this.horario.bloqueado" [ngModelOptions]="{standalone: true}">Indisponível
+          </ion-toggle><br /><br />
 
         <ion-button color="secondary" shape="round" expand="full" (click)="cadastrarHorario()">Adicionar
           Horario</ion-button>
@@ -79,9 +79,7 @@ crossorigin="anonymous"></script>
         <!-- <ion-button shape="round" expand="full" (click)="listar()">Listar</ion-button> -->
       
         <ion-item *ngFor="let funcionario of this.funcionarios" (click)="definirHora(funcionario)">
-          <ion-label>
-            {{funcionario.id}}
-          </ion-label>
+          
           <ion-label>
             {{funcionario.nome}}
           </ion-label>
@@ -94,31 +92,5 @@ crossorigin="anonymous"></script>
     </ion-col>
   </ion-row>
 
-  <!-- <ion-row>
-    <ion-col>
-      <ng-container *ngFor="let funcionarios of this.funcionario">
-        <form (ngSubmit)="removerFuncionario(funcionario)">
-          <ion-item>
-            <ion-label>Nome do Aluno: {{ funcionarios['nome'] }}</ion-label>
-          </ion-item>
-          <ion-item lines="none">
-            <ion-button color="light" slot="end" type="submit">Remover Aluno</ion-button>
-          </ion-item>
-        </form>
-      </ng-container>
-    </ion-col>
-  </ion-row> -->
 
-  <!-- <ion-row class="listar_Horarios">
-    <ion-col class="secao_horario" size="11" size-lg="4">
-      <ion-button shape="round" expand="full" (click)="listarhorario()">Listar</ion-button>
-      <ion-list class="lista_funcionario">
-        <ion-item *ngFor="let horario of this.horarios">
-          <ion-label>
-            {{horario.funcionario_id}}
-          </ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-col>
-  </ion-row> -->
 </ion-content>
