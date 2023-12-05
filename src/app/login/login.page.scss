@@ -1,68 +1,181 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  
-  
-    // border: 1px solid red;
-  
-  }
-  
-  // cor de fundo
-  .cor_fundo {
-    --ion-background-color: white;
-  }
-  
-  // css menu
-  ion-menu {
-    position: fixed;
-  }
-  
-  // Menu 
-  .menu_color {
-    background-color: #03258C;
-    padding: 1vh 2vh 1vh 2vh;
-  }
-  
-  .logo_menu {
-    display: flex;
-    justify-content: start;
-    margin: auto;
-  }
-  .logo_menu img{
-    width: 50%;
-  }
-  
-  .link_menu {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  }
-  
-  .link_menu a {
-    color: white;
-    font-size: large;
-  }
-  
-  .link_menu a:hover {
-    color: #cbdcfe;
-    border-bottom: 1px solid #73020C;
-    font-size: larger;
-    cursor: pointer;
-  }
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+  // border: 1px solid red;
+
+}
+
+// cor de fundo
+.cor_fundo {
+  --ion-background-color: white;
+}
+
+// css menu
+ion-menu {
+  position: fixed;
+}
+
+// Menu 
+.menu_color {
+  background-color: #03258C;
+  padding: 1vh 2vh 1vh 2vh;
+}
+
+.logo_menu {
+  display: flex;
+  justify-content: start;
+  margin: auto;
+}
+
+.logo_menu img {
+  width: 50%;
+}
+
+.link_menu {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.link_menu a {
+  color: white;
+  font-size: large;
+}
+
+.link_menu a:hover {
+  color: #cbdcfe;
+  border-bottom: 1px solid #73020C;
+  font-size: larger;
+  cursor: pointer;
+}
 
 //   SEÇÃO LOGIN
-.center_form{
-    display: flex;
-    justify-content: center;
-    margin-top: 5vh;
-}
-.center_form h1{
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bolder;
+.center_form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  color: black;
+
 }
 
-.form_login{
-    padding: 3vh 2vh 3vh 2vh;
+.center_form h1 {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.form_login {
+  background-color: #f7f7f7;
+  border: 1px solid black;
+  border-radius: 1vh;
+  padding: 3vh 2.5vh 3vh 2.5vh;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+// footer
+
+.footer {
+  color: white;
+  margin-top: 25vh;
+  padding: 7vh 3vh 3vh 3vh;
+  background: rgb(3, 37, 140);
+  background: radial-gradient(circle, rgba(3, 37, 140, 1) 11%, rgba(3, 43, 150, 1) 45%, rgba(2, 15, 89, 1) 93%);
+}
+
+// seção empresa
+.footer .empresa {
+  display: flex;
+  justify-content: center;
+  padding: 4vh;
+}
+
+.footer .empresa .rodape_logo {
+  width: 15vh;
+  height: 8vh;
+  border-bottom: 2px solid#73020C;
+}
+
+.footer .empresa .text_rodape {
+  margin-top: 3vh;
+}
+
+// seção mapa do site
+.footer .mapa_site {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+
+}
+
+.footer .mapa_site h3 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer .mapa_site ul {
+  margin-top: 1.5vh;
+  list-style: none;
+  font-size: larger;
+}
+
+.footer .mapa_site li:hover {
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+
+// Link para redes sociais
+.footer .redes_sociais h3 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer .redes_sociais {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+
+}
+
+.footer .redes_sociais .social {
+  margin-top: 1.5vh;
+  font-size: larger;
+}
+
+.footer .redes_sociais .social a {
+  color: white;
+  margin-top: 2vh;
+}
+
+.footer .redes_sociais .social a:hover {
+  font-size: x-large;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+
+.footer .redes_sociais .social svg {
+  width: 3vh;
+}
+
+// sac
+.footer .sac {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+
+
+}
+
+.footer .sac h3 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer .sac p {
+  font-size: large;
 }
